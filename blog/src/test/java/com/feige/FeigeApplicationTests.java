@@ -1,13 +1,22 @@
 package com.feige;
 
+
+import com.feige.commen.utils.redis.RedisCache;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class FeigeApplicationTests {
 
+@SpringBootTest
+public class FeigeApplicationTests {
+
+    @Autowired
+    RedisCache redisCache;
+    
     @Test
-    void contextLoads() {
+    public void contextLoads() {
+        Object feige = redisCache.getCacheObject("feige");
+        System.out.println(feige);
     }
 
 }
