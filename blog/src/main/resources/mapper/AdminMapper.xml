@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.feige.dao.AdminMapper">
+    <insert id="addAdmin" parameterType="Admin">
+        insert into `admin`(admin_name,password,email) values (#{adminName},#{password},#{emial})
+    </insert>
+    <delete id="deleteAdmin" parameterType="String">
+        delete from `admin` where admin_name=#{adminName}
+    </delete>
+    <update id="updateAdmin" parameterType="Admin">
+        update `admin` set admin_name=#{adminName},email=#{email},password=#{password} where id=#{id}
+    </update>
+    <select id="getAdmins" resultMap="AdminRoles" parameterType="map">
+        select a.id aid,a.admin_name adminName,password,email,r.id rid,r.role_name roleName,r.permission permission
+        from permission p,role r,admin a
+        <if test="searchContent==null">
+            where a.id=p.aid and r.id=p.rid limit #{page},#{count}
+        </if>
+        <if test="searchContent!=null">
+            where a.id=p.aid and r.id=p.rid and a.admin_name=#{searchContent}
+        </if>
+    </select>
+
+    <resultMap id="AdminRoles" type="Admin">
+        <result  property="id" column="aid"/>
+        <result property="adminName" column="adminName"/>
+        <result property="password" column="password"/>
+        <result property="email" column="email"/>
+        <collection property="roles" ofType="Role">
+            <result property="id" column="rid" />
+            <result property="roleName" column="roleName" />
+            <result property="permission" column="permission" />
+        </collection>
+    </resultMap>
+    <select id="getAdmin" resultMap="AdminRole" parameterType="String">
+        select a.id aid,a.admin_name adminName,password,email,r.id rid,r.role_name roleName,r.permission permission
+from permission p,role r,admin a where a.admin_name=#{adminName} and a.id=p.aid and r.id=p.rid;
+    </select>
+
+    <resultMap id="AdminRole" type="Admin">
+        <result  property="id" column="aid"/>
+        <result property="adminName" column="adminName"/>
+        <result property="password" column="password"/>
+        <result property="email" column="email"/>
+        <collection property="roles" ofType="Role">
+            <result property="id" column="rid" />
+            <result property="roleName" column="roleName" />
+            <result property="permission" column="permission" />
+        </collection>
+    </resultMap>
+    <select id="getCount" resultType="int" parameterType="map">
+        select count(*) from `admin`
+        <if test="searchContent!=null">
+            where admin_name=#{searchContent}
+        </if>
+    </select>
+</mapper>

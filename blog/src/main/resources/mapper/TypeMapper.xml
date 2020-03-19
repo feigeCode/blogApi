@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.feige.dao.TypeMapper">
+    <insert id="addType" parameterType="Type">
+        insert into `type`(type_name) values (#{typeName})
+    </insert>
+    <delete id="deleteType" parameterType="String">
+        delete from `type` where type_name=#{typeName}
+    </delete>
+    <update id="updateType" parameterType="Type">
+        update `type` set type_name=#{typeName} where id=#{id}
+    </update>
+    <select id="getTypes" resultType="Type" parameterType="map">
+        select id,type_name typeName
+        from `type`
+        <if test="searchContent==null">
+            limit #{page},#{count}
+        </if>
+        <if test="searchContent!=null">
+            where type_name=#{searchContent}
+        </if>
+    </select>
+    <select id="getType" parameterType="String" resultType="Type">
+        select id,type_name typeName from `type` where type_name=#{typeName}
+    </select>
+    <select id="getCount" parameterType="map" resultType="int">
+        select count(*) from `type`
+        <if test="searchContent!=null">
+            where type_name=#{searchContent}
+        </if>
+    </select>
+</mapper>

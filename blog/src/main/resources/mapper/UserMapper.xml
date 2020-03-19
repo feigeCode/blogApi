@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.feige.dao.UserMapper">
+    <insert id="addUser" parameterType="User">
+        insert into `user`(head_photo,username,email,password,sex,register_time,hobby,self_introduce,other) values (#{headPhoto},#{username},#{email},#{password},#{sex},#{time},#{hobby},#{selfIntroduce},#{other})
+    </insert>
+    <delete id="deleteUser" parameterType="String">
+        delete from `user` where username=#{username}
+    </delete>
+    <update id="updateUser" parameterType="user">
+        update `user` set head_photo=#{headPhoto},username=#{username},email=#{email},password=#{password},sex=#{sex},register_time=#{time},hobby=#{hobby},self_introduce=#{selfIntroduce},other=#{other} where id=#{id}
+    </update>
+    <select id="getUsers" resultType="User" parameterType="com.feige.common.utils.SelectParam">
+        select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other
+        from `user`
+        <if test="searchContent==null">
+            limit #{page},#{limit}
+        </if>
+        <if test="searchContent!=null">
+           where username like #{searchContent} limit #{page},#{limit}
+        </if>
+    </select>
+    <select id="getUserById" parameterType="Integer" resultType="User">
+        select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where id=#{id}
+    </select>
+    <select id="getUser" parameterType="String" resultType="User">
+        select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where username=#{username}
+    </select>
+    <select id="getCount" parameterType="String" resultType="int">
+        select count(*) from `user`
+            <if test="searchContent!=null">
+               where username like #{searchContent}
+            </if>
+    </select>
+</mapper>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.feige.dao.CommentMapper">
+    <insert id="addComment" parameterType="map">
+        insert into `comments`(content,parent_id,good,create_time,replier,blog_id,user_id) values (#{content},#{parentId},#{good},#{createTime},#{replier},#{blogId},#{userId})
+    </insert>
+    <delete id="deleteComment" parameterType="integer">
+        delete from `comments` where id=#{id}
+    </delete>
+    <select id="getComments" resultType="Comment" parameterType="map">
+        select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=#{blogId} and c.user_id=u.id  and
+        c.parent_id is null limit #{page},#{count};;
+    </select>
+    <select id="getReplys" resultType="Comment" parameterType="map">
+        select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=#{blogId} and c.user_id=u.id and
+        c.parent_id =#{parentId};
+
+    </select>
+    <select id="getCount1" resultType="int" parameterType="map">
+        select distinct count(*) from comments c
+        where c.blog_id=#{blogId} and
+        c.parent_id is null;
+    </select>
+
+    <select id="getAllComment" resultType="Comment" parameterType="map">
+        select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,username,c.create_time createTime,replier from blog b,comments c,user u
+        <if test="searchContent==null">
+            where c.blog_id=b.id and c.user_id=u.id limit #{page},#{count};
+        </if>
+        <if test="searchContent!=null">
+            where c.blog_id=b.id and c.user_id=u.id and c.content like "%"#{searchContent}"%" limit #{page},#{count}
+        </if>
+    </select>
+    <select id="getCount2" resultType="int" parameterType="map">
+        select distinct count(*) from blog b,comments c,user u
+        where c.blog_id=b.id and c.user_id=u.id
+        <if test="searchContent!=null">
+            and c.content like "%"#{searchContent}"%"
+        </if>
+    </select>
+</mapper>

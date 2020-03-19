@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.feige.dao.RoleMapper">
+    <insert id="addRole" parameterType="Role">
+        insert into `role`(role_name,permission) values (#{roleName},#{permission})
+    </insert>
+    <delete id="deleteRole" parameterType="String">
+        delete from `role` where role_name=#{roleName}
+    </delete>
+    <update id="updateRole" parameterType="Role">
+        update `role` set role_name=#{roleName},permission=#{permission} where id=#{id}
+    </update>
+    <select id="getRoles" resultType="Role" parameterType="map">
+        select id,role_name roleName,permission
+        from `role`
+        <if test="searchContent==null">
+            limit #{page},#{count}
+        </if>
+        <if test="searchContent!=null">
+            where role_name=#{searchContent}
+        </if>
+    </select>
+    <select id="getRole" parameterType="String" resultType="Role">
+        select id,role_name roleName,permission from `role` where role_name=#{roleName}
+    </select>
+    <select id="getCount" parameterType="map" resultType="int">
+        select count(*) from `role`
+        <if test="searchContent!=null">
+            where role_name=#{searchContent}
+        </if>
+    </select>
+</mapper>
