@@ -19,7 +19,7 @@ import java.util.List;
 
 @Api(tags = "用户的增删改查接口")
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/user")
 public class UserController {
     @Autowired
     private UserService userService;
