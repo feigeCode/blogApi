@@ -1,7 +1,7 @@
 package com.feige;
 
 
-import com.alibaba.druid.pool.DruidDataSource;
+import com.feige.common.constants.Constants;
 import com.feige.common.utils.redis.RedisCache;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +21,11 @@ public class FeigeApplicationTests {
     
     @Test
     public void contextLoads() {
-        //Object feige = redisCache.getCacheObject("feige");
-        //System.out.println(feige);
-        DruidDataSource druidDataSource = (DruidDataSource) dataSource;
-        System.out.println(druidDataSource.getActiveCount());
+        Object feige = redisCache.getCacheObject(Constants.LOGIN_USER_KEY);
+        System.out.println(feige);
+        //DruidDataSource druidDataSource = (DruidDataSource) dataSource;
+        //System.out.println(druidDataSource.getActiveCount());
     }
+
 
 }

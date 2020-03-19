@@ -35,4 +35,14 @@
                where username like #{searchContent}
             </if>
     </select>
+    <select id="getPermissions" resultType="Role" parameterType="com.feige.common.utils.SelectParam">
+        select r.id id,r.role_name roleName,r.permission permission
+        from permission p,role r,user u
+        <if test="searchContent==null">
+            where a.id=p.aid and r.id=p.rid limit #{page},#{limit}
+        </if>
+        <if test="searchContent!=null">
+            where a.id=p.aid and r.id=p.rid and u.username=#{searchContent} limit #{page},#{limit}
+        </if>
+    </select>
 </mapper>

@@ -1,0 +1,1780 @@
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} created. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [16]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 10.960435 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [16, springboot, dddd, dddd, 2020-03-19 23:38:44.0, 2020-03-19 23:38:44.0, feige, 2]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} created. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [s]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 0.601333 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} created. update `blog` set type_name=?,title=?,content=?,create_time=?,change_time=?,author=?,view=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [mybatis, s, s, s, 2020-03-19 15:46:43, feige, 1, 0]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 0.824 millis. update `blog` set type_name=?,title=?,content=?,create_time=?,change_time=?,author=?,view=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} created. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where username=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} Parameters : [admin]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} executed. 2.48222 millis. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where username=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50002} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50002} Header: [id, head_photo, username, email, password, sex, register_time, hobby, self_introduce, other]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50002} Result: [21, qqq, admin, qqqq, qqq, false, 2020-03-19 23:36:58.0, qqq, qq, qqq]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50002} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [16]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 1.370221 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50003} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50003} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50003} Result: [16, springboot, dddd, dddd, 2020-03-19 23:38:44.0, 2020-03-19 23:38:44.0, feige, 2]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50003} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [s]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 0.917777 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50004} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50004} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50004} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [mybatis, s, s, s, 2020-03-19 15:47:32, admin, 1, 0]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 0.878666 millis. update `blog` set type_name=?,title=?,content=?,create_time=?,change_time=?,author=?,view=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} created. delete from `blog` where title=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [s]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.982666 millis. delete from `blog` where title=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [dddd]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 10.439102 millis. delete from `blog` where title=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} created. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog
+         
+         
+            where title like ? or content like ? limit ?,?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Parameters : [%dddd%, %dddd%, 0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Types : [VARCHAR, VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} executed. 0.802666 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog
+         
+         
+            where title like ? or content like ? limit ?,?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50005} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50005} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50005} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} created. select count(*) from `blog`
+         
+            where title like ? or content like ?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} Parameters : [dddd, dddd]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} Types : [VARCHAR, VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} executed. 0.530222 millis. select count(*) from `blog`
+         
+            where title like ? or content like ?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20006, rs-50006} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20006, rs-50006} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20006, rs-50006} Result: [0]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20006, rs-50006} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [dddd]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 1.019554 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50007} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50007} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50007} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20007} created. insert into `blog`(type_name,title,content,create_time,change_time,author,view) values (?,?,?,?,?,?,?)
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20007} Parameters : [springboot, dddd, dddd, 2020-03-19 15:48:24, 2020-03-19 15:48:24, feige, 2]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20007} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20007} executed. 11.582657 millis. insert into `blog`(type_name,title,content,create_time,change_time,author,view) values (?,?,?,?,?,?,?)
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20007} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Parameters : [%dddd%, %dddd%, 0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Types : [VARCHAR, VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} executed. 1.341332 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog
+         
+         
+            where title like ? or content like ? limit ?,?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50008} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50008} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50008} Result: [17, springboot, dddd, dddd, 2020-03-19 23:48:24.0, 2020-03-19 23:48:24.0, feige, 2]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50008} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} Parameters : [dddd, dddd]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} Types : [VARCHAR, VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} executed. 1.91022 millis. select count(*) from `blog`
+         
+            where title like ? or content like ?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20006, rs-50009} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20006, rs-50009} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20006, rs-50009} Result: [1]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20006, rs-50009} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [17]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 0.992444 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50010} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50010} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50010} Result: [17, springboot, dddd, dddd, 2020-03-19 23:48:24.0, 2020-03-19 23:48:24.0, feige, 2]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50010} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [s]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 0.572444 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50011} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50011} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50011} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [springboot, s, s, s, 2020-03-19 15:49:10, admin, 1, 0]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 0.634221 millis. update `blog` set type_name=?,title=?,content=?,create_time=?,change_time=?,author=?,view=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} created. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [17]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 8.296437 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [17, springboot, dddd, dddd, 2020-03-19 23:48:24.0, 2020-03-19 23:48:24.0, feige, 2]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} created. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [s]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 0.704444 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} created. update `blog` set type_name=?,title=?,content=?,create_time=?,change_time=?,author=?,view=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [springboot, s, s, s, 2020-03-19 15:53:32, admin, 1, 0]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 0.924888 millis. update `blog` set type_name=?,title=?,content=?,create_time=?,change_time=?,author=?,view=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} created. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [17]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 9.442214 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [17, springboot, dddd, dddd, 2020-03-19 23:48:24.0, 2020-03-19 23:48:24.0, feige, 2]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} created. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [s]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 0.644444 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} created. update `blog` set type_name=?,title=?,content=?,create_time=?,change_time=?,author=?,view=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [springboot, s, s, s, 2020-03-19 15:55:49, admin, 1, 0]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 0.764444 millis. update `blog` set type_name=?,title=?,content=?,create_time=?,change_time=?,author=?,view=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [17]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 1.995998 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50002} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50002} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50002} Result: [17, springboot, dddd, dddd, 2020-03-19 23:48:24.0, 2020-03-19 23:48:24.0, feige, 2]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50002} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [s]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 1.93022 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50003} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50003} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50003} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [springboot, s, s, s, 2020-03-19 16:00:42, feige, 1, 0]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 1.906665 millis. update `blog` set type_name=?,title=?,content=?,create_time=?,change_time=?,author=?,view=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [17]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 0.607999 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50004} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50004} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50004} Result: [17, springboot, dddd, dddd, 2020-03-19 23:48:24.0, 2020-03-19 23:48:24.0, feige, 2]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50004} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [ss]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 0.613333 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50005} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50005} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50005} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [springboot, ss, ss, 2020-02-23 19:07:20, 2020-03-19 16:02:06, feige, 11, 0]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 0.518667 millis. update `blog` set type_name=?,title=?,content=?,create_time=?,change_time=?,author=?,view=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [17]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 0.693777 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50006} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50006} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50006} Result: [17, springboot, dddd, dddd, 2020-03-19 23:48:24.0, 2020-03-19 23:48:24.0, feige, 2]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50006} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [ss]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 0.841777 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50007} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50007} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50007} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [springboot, ss, ss, 2020-02-23 19:07:20, 2020-03-19 16:03:55, admin, 11, 0]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 0.614222 millis. update `blog` set type_name=?,title=?,content=?,create_time=?,change_time=?,author=?,view=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} created. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [17]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 15.63332 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [17, springboot, dddd, dddd, 2020-03-19 23:48:24.0, 2020-03-19 23:48:24.0, feige, 2]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} created. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [ss]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 0.642666 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} created. update `blog` set type_name=?,title=?,content=?,create_time=?,change_time=?,author=?,view=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [springboot, ss, ss, 2020-02-23 19:07:20, 2020-03-19 16:06:05, admin, 11, 0]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 0.753777 millis. update `blog` set type_name=?,title=?,content=?,create_time=?,change_time=?,author=?,view=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} created. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [17]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 10.369324 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [17, springboot, dddd, dddd, 2020-03-19 23:48:24.0, 2020-03-19 23:48:24.0, feige, 2]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} created. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [ss]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 0.797777 millis. select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Header: [id, type_name, title, content, create_time, change_time, author, view]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} created. update `blog` set type_name=?,title=?,content=?,create_time=?,change_time=?,author=?,view=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [springboot, ss, ss, 2020-02-23 19:07:20, 2020-03-19 16:07:13, admin, 11, 17]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 4.537329 millis. update `blog` set type_name=?,title=?,content=?,create_time=?,change_time=?,author=?,view=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} created. select id,role_name roleName,permission from `role` where role_name=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [role_add]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 15.505764 millis. select id,role_name roleName,permission from `role` where role_name=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, role_name, permission]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} created. insert into `role`(role_name,permission) values (?,?)
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [role_add, role:add]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR, VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 6.566661 millis. insert into `role`(role_name,permission) values (?,?)
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} created. select id,role_name roleName,permission
+        from `role`
+         
+            limit ?,?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 1.648443 millis. select id,role_name roleName,permission
+        from `role`
+         
+            limit ?,?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50001} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50001} Header: [id, role_name, permission]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50001} Result: [1, user, user:index]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50001} Result: [2, admin, admin:add]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50001} Result: [3, update, admin:update]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50001} Result: [4, a, a]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50001} Result: [5, role_add, role:add]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50001} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} created. select count(*) from `role`
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} Parameters : []
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} Types : []
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} executed. 1.029332 millis. select count(*) from `role`
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50002} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50002} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50002} Result: [5]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50002} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} created. select id,role_name roleName,permission
+        from `role`
+         
+         
+            where role_name=? limit ?,?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [%role_add%, 0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 1.539999 millis. select id,role_name roleName,permission
+        from `role`
+         
+         
+            where role_name=? limit ?,?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50003} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50003} Header: [id, role_name, permission]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50003} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} created. select count(*) from `role`
+         
+            where role_name=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Parameters : [role_add]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} executed. 0.814221 millis. select count(*) from `role`
+         
+            where role_name=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50004} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50004} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50004} Result: [1]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50004} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [%role_add%, 0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 1.110221 millis. select id,role_name roleName,permission
+        from `role`
+         
+         
+            where role_name=? limit ?,?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50005} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50005} Header: [id, role_name, permission]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50005} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Parameters : [role_add]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} executed. 0.778666 millis. select count(*) from `role`
+         
+            where role_name=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50006} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50006} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50006} Result: [1]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50006} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [%role_add%, 0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 1.544444 millis. select id,role_name roleName,permission
+        from `role`
+         
+         
+            where role_name=? limit ?,?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50007} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50007} Header: [id, role_name, permission]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50007} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Parameters : [role_add]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} executed. 1.411555 millis. select count(*) from `role`
+         
+            where role_name=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50008} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50008} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50008} Result: [1]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50008} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [%role_add%, 0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.886666 millis. select id,role_name roleName,permission
+        from `role`
+         
+         
+            where role_name=? limit ?,?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50009} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50009} Header: [id, role_name, permission]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50009} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Parameters : [role_add]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} executed. 0.725332 millis. select count(*) from `role`
+         
+            where role_name=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50010} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50010} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50010} Result: [1]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50010} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 2.755109 millis. select id,role_name roleName,permission
+        from `role`
+         
+            limit ?,?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50011} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50011} Header: [id, role_name, permission]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50011} Result: [1, user, user:index]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50011} Result: [2, admin, admin:add]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50011} Result: [3, update, admin:update]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50011} Result: [4, a, a]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50011} Result: [5, role_add, role:add]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50011} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} Parameters : []
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} Types : []
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} executed. 1.099999 millis. select count(*) from `role`
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50012} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50012} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50012} Result: [5]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50012} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [%role_add%, 0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 1.310221 millis. select id,role_name roleName,permission
+        from `role`
+         
+         
+            where role_name=? limit ?,?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50013} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50013} Header: [id, role_name, permission]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50013} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Parameters : [role_add]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} executed. 0.980888 millis. select count(*) from `role`
+         
+            where role_name=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50014} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50014} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50014} Result: [1]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50014} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} created. select id,role_name roleName,permission
+        from `role`
+         
+         
+            where role_name like ? limit ?,?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [%role_add%, 0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 12.965766 millis. select id,role_name roleName,permission
+        from `role`
+         
+         
+            where role_name like ? limit ?,?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, role_name, permission]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [5, role_add, role:add]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} created. select count(*) from `role`
+         
+            where role_name=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [role_add]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 0.654666 millis. select count(*) from `role`
+         
+            where role_name=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Result: [1]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} created. select id,role_name roleName,permission from `role` where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [5]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 1.494221 millis. select id,role_name roleName,permission from `role` where id=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50002} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50002} Header: [id, role_name, permission]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50002} Result: [5, role_add, role:add]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50002} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} created. select id,role_name roleName,permission from `role` where role_name=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} Parameters : [role_update]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} executed. 0.921777 millis. select id,role_name roleName,permission from `role` where role_name=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50003} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50003} Header: [id, role_name, permission]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50003} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} created. update `role` set role_name=?,permission=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [role_update, role:update, 5]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [VARCHAR, VARCHAR, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 10.583102 millis. update `role` set role_name=?,permission=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} created. delete from `role` where role_name=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Parameters : [role_add]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} executed. 1.346666 millis. delete from `role` where role_name=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Parameters : [role_update]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} executed. 18.212428 millis. delete from `role` where role_name=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} created. select id,type_name typeName from `type` where type_name=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [ddddd]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 20.320871 millis. select id,type_name typeName from `type` where type_name=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, type_name]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} created. insert into `type`(type_name) values (?)
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [ddddd]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 5.653773 millis. insert into `type`(type_name) values (?)
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} created. delete from `type` where type_name=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [ddddd]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 13.550655 millis. delete from `type` where type_name=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} created. select id,type_name typeName
+        from `type`
+         
+            limit ?,?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} Parameters : [0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} executed. 0.708 millis. select id,type_name typeName
+        from `type`
+         
+            limit ?,?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50001} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50001} Header: [id, type_name]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50001} Result: [3, mybatis]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50001} Result: [2, spring]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50001} Result: [1, springboot]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50001} Result: [4, springMVC]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50001} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} created. select count(*) from `type`
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : []
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : []
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.622222 millis. select count(*) from `type`
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50002} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50002} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50002} Result: [4]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50002} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} created. select id,type_name typeName
+        from `type`
+         
+         
+            where type_name like ? limit ?,?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Parameters : [%mybatis%, 0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Types : [VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} executed. 1.962221 millis. select id,type_name typeName
+        from `type`
+         
+         
+            where type_name like ? limit ?,?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50003} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50003} Header: [id, type_name]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50003} Result: [3, mybatis]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50003} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} created. select count(*) from `type`
+         
+            where type_name=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} Parameters : [mybatis]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} executed. 0.958665 millis. select count(*) from `type`
+         
+            where type_name=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20006, rs-50004} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20006, rs-50004} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20006, rs-50004} Result: [1]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20006, rs-50004} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20007} created. select id,type_name typeName from `type` where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20007} Parameters : [3]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20007} Types : [INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20007} executed. 1.002665 millis. select id,type_name typeName from `type` where id=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20007, rs-50005} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20007, rs-50005} Header: [id, type_name]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20007, rs-50005} Result: [3, mybatis]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20007, rs-50005} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20007} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20008} created. update `type` set type_name=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20008} Parameters : [mybatis, 3]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20008} Types : [VARCHAR, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20008} executed. 3.972441 millis. update `type` set type_name=? where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20008} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} created. insert into `comments`(content,parent_id,good,create_time,replier,blog_id,user_id) values (?,?,?,?,?,?,?)
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [DDD, null, 11, 2020-03-19 18:33:50, null, 1, 1]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [VARCHAR, OTHER, INTEGER, VARCHAR, OTHER, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 25.880866 millis. insert into `comments`(content,parent_id,good,create_time,replier,blog_id,user_id) values (?,?,?,?,?,?,?)
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} created. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,username,c.create_time createTime,replier from blog b,comments c,user u
+         
+         
+            where c.blog_id=b.id and c.user_id=u.id and c.content like ? limit ?,?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [%DDD%, 0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 16.115986 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,username,c.create_time createTime,replier from blog b,comments c,user u
+         
+         
+            where c.blog_id=b.id and c.user_id=u.id and c.content like ? limit ?,?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [11, adddddddddddddddddd, 6, 222, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-26 09:24:43.0, hufeige]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [33, DDD, null, 11, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-03-20 02:33:50.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} created. select distinct count(*) from blog b,comments c,user u
+        where c.blog_id=b.id and c.user_id=u.id
+         
+            and c.content like ?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [DDD]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 0.787555 millis. select distinct count(*) from blog b,comments c,user u
+        where c.blog_id=b.id and c.user_id=u.id
+         
+            and c.content like ?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Result: [1]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} created. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,username,c.create_time createTime,replier from blog b,comments c,user u
+         
+         
+            where c.blog_id=b.id and c.user_id=u.id and c.content like ? limit ?,?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [%DDD%, 0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 19.397317 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,username,c.create_time createTime,replier from blog b,comments c,user u
+         
+         
+            where c.blog_id=b.id and c.user_id=u.id and c.content like ? limit ?,?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [11, adddddddddddddddddd, 6, 222, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-26 09:24:43.0, hufeige]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [33, DDD, null, 11, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-03-20 02:33:50.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} created. select distinct count(*) from blog b,comments c,user u
+        where c.blog_id=b.id and c.user_id=u.id
+         
+            and c.content=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [DDD]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 0.682667 millis. select distinct count(*) from blog b,comments c,user u
+        where c.blog_id=b.id and c.user_id=u.id
+         
+            and c.content=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Result: [1]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} created. select distinct count(*) from comments c
+        where c.blog_id=? and
+        c.parent_id is null;
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [1]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 14.064877 millis. select distinct count(*) from comments c
+        where c.blog_id=? and
+        c.parent_id is null;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50002} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50002} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50002} Result: [13]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50002} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} created. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id  and
+        c.parent_id is null limit ?,?;;
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} Parameters : [1, 0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} Types : [INTEGER, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} executed. 1.404443 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id  and
+        c.parent_id is null limit ?,?;;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50003} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50003} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50003} Result: [1, aaaaa, null, 22, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-02-24 04:04:34.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50003} Result: [6, aa, null, 222, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-02-24 06:22:08.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50003} Result: [12, hufeigegege, null, 0, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-26 09:54:47.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50003} Result: [14, qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq, null, 0, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-26 10:12:44.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50003} Result: [16, qqqq, null, 0, https://www.pyfeige.com/static/img/3.png, 1, 2020-02-26 21:24:26.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50003} Result: [17, sssss, null, 0, https://www.pyfeige.com/static/img/3.png, 1, 2020-02-26 21:24:37.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50003} Result: [18, ssss, null, 0, https://www.pyfeige.com/static/img/3.png, sss, 2020-02-26 21:24:53.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50003} Result: [19, ssssxxx, null, 0, https://www.pyfeige.com/static/img/3.png, sss, 2020-02-26 21:24:57.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50003} Result: [20, ssssxxxxxx, null, 0, https://www.pyfeige.com/static/img/3.png, sss, 2020-02-26 21:25:00.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50003} Result: [21, ssssxxxxxxxxxxx, null, 0, https://www.pyfeige.com/static/img/3.png, sss, 2020-02-26 21:25:03.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50003} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} created. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 1]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.933333 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50004} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50004} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50004} Result: [2, hhh, 1, 122, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-24 04:05:59.0, feige]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50004} Result: [4, cc, 1, 122, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-02-24 04:17:34.0, feige]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50004} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 1]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.9 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50005} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50005} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50005} Result: [2, hhh, 1, 122, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-24 04:05:59.0, feige]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50005} Result: [4, cc, 1, 122, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-02-24 04:17:34.0, feige]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50005} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 2]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 1.287998 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50006} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50006} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50006} Result: [3, xx, 2, 122, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-24 04:06:56.0, dage]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50006} Result: [5, vv, 2, 122, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-24 04:18:31.0, dage]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50006} Result: [8, dage, 2, 6222, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-02-24 06:23:39.0, dage]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50006} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 2]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.98311 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50007} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50007} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50007} Result: [3, xx, 2, 122, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-24 04:06:56.0, dage]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50007} Result: [5, vv, 2, 122, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-24 04:18:31.0, dage]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50007} Result: [8, dage, 2, 6222, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-02-24 06:23:39.0, dage]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50007} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 3]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.833333 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50008} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50008} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50008} Result: [7, feige, 3, 6222, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-24 06:22:57.0, dd]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50008} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 3]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.760444 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50009} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50009} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50009} Result: [7, feige, 3, 6222, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-24 06:22:57.0, dd]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50009} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 7]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.654222 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50010} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50010} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50010} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 7]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.620444 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50011} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50011} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50011} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 7]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.632444 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50012} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50012} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50012} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 7]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.628444 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50013} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50013} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50013} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 6]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.909332 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50014} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50014} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50014} Result: [11, adddddddddddddddddd, 6, 222, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-26 09:24:43.0, hufeige]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50014} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 6]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.774222 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50015} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50015} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50015} Result: [11, adddddddddddddddddd, 6, 222, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-26 09:24:43.0, hufeige]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50015} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 11]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.918221 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50016} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50016} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50016} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 12]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.789777 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50017} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50017} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50017} Result: [13, aaaaaa, 12, 0, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-26 09:55:11.0, dage]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50017} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 12]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.665332 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50018} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50018} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50018} Result: [13, aaaaaa, 12, 0, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-26 09:55:11.0, dage]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50018} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 13]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.608444 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50019} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50019} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50019} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 14]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.669333 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50020} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50020} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50020} Result: [15, dffffffffffffffffffffffffffffff, 14, 0, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-26 10:13:13.0, dd]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50020} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 14]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.63111 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50021} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50021} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50021} Result: [15, dffffffffffffffffffffffffffffff, 14, 0, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-26 10:13:13.0, dd]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50021} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 15]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.545778 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50022} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50022} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50022} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 16]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.511111 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50023} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50023} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50023} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 17]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.578222 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50024} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50024} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50024} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 18]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.742666 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50025} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50025} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50025} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 19]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.641332 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50026} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50026} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50026} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 20]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 1.160888 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50027} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50027} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50027} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 21]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.769777 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50028} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50028} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50028} Result: [23, aaaaaaaaaaaaaaaaaaaa, 21, 0, https://www.pyfeige.com/static/img/3.png, sss, 2020-02-26 21:26:14.0, sss]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50028} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 21]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.687999 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50029} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50029} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50029} Result: [23, aaaaaaaaaaaaaaaaaaaa, 21, 0, https://www.pyfeige.com/static/img/3.png, sss, 2020-02-26 21:26:14.0, sss]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50029} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 23]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.555111 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50030} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50030} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50030} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} created. delete from `comments` where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Parameters : [33]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Types : [INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} executed. 3.42622 millis. delete from `comments` where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} created. insert into `comments`(content,parent_id,good,create_time,replier,blog_id,user_id) values (?,?,?,?,?,?,?)
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} Parameters : [DDD, 2, 11, 2020-03-19 18:40:22, FF, 1, 1]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} Types : [VARCHAR, INTEGER, INTEGER, VARCHAR, VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} executed. 12.922655 millis. insert into `comments`(content,parent_id,good,create_time,replier,blog_id,user_id) values (?,?,?,?,?,?,?)
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20006} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [%DDD%, 0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 1.446221 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,username,c.create_time createTime,replier from blog b,comments c,user u
+         
+         
+            where c.blog_id=b.id and c.user_id=u.id and c.content like ? limit ?,?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50031} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50031} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50031} Result: [11, adddddddddddddddddd, 6, 222, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-26 09:24:43.0, hufeige]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50031} Result: [34, DDD, 2, 11, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-03-20 02:40:22.0, FF]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50031} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [DDD]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 0.883555 millis. select distinct count(*) from blog b,comments c,user u
+        where c.blog_id=b.id and c.user_id=u.id
+         
+            and c.content=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50032} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50032} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50032} Result: [1]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50032} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [1]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 4.296885 millis. select distinct count(*) from comments c
+        where c.blog_id=? and
+        c.parent_id is null;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50033} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50033} Header: [count(*)]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50033} Result: [12]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50033} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} Parameters : [1, 0, 10]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} Types : [INTEGER, INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} executed. 2.802664 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id  and
+        c.parent_id is null limit ?,?;;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50034} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50034} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50034} Result: [1, aaaaa, null, 22, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-02-24 04:04:34.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50034} Result: [6, aa, null, 222, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-02-24 06:22:08.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50034} Result: [12, hufeigegege, null, 0, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-26 09:54:47.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50034} Result: [14, qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq, null, 0, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-26 10:12:44.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50034} Result: [16, qqqq, null, 0, https://www.pyfeige.com/static/img/3.png, 1, 2020-02-26 21:24:26.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50034} Result: [17, sssss, null, 0, https://www.pyfeige.com/static/img/3.png, 1, 2020-02-26 21:24:37.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50034} Result: [18, ssss, null, 0, https://www.pyfeige.com/static/img/3.png, sss, 2020-02-26 21:24:53.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50034} Result: [19, ssssxxx, null, 0, https://www.pyfeige.com/static/img/3.png, sss, 2020-02-26 21:24:57.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50034} Result: [20, ssssxxxxxx, null, 0, https://www.pyfeige.com/static/img/3.png, sss, 2020-02-26 21:25:00.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50034} Result: [21, ssssxxxxxxxxxxx, null, 0, https://www.pyfeige.com/static/img/3.png, sss, 2020-02-26 21:25:03.0, null]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50034} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20003} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 1]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 1.349333 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50035} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50035} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50035} Result: [2, hhh, 1, 122, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-24 04:05:59.0, feige]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50035} Result: [4, cc, 1, 122, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-02-24 04:17:34.0, feige]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50035} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 1]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.96711 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50036} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50036} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50036} Result: [2, hhh, 1, 122, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-24 04:05:59.0, feige]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50036} Result: [4, cc, 1, 122, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-02-24 04:17:34.0, feige]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50036} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 2]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.995999 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50037} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50037} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50037} Result: [3, xx, 2, 122, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-24 04:06:56.0, dage]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50037} Result: [5, vv, 2, 122, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-24 04:18:31.0, dage]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50037} Result: [8, dage, 2, 6222, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-02-24 06:23:39.0, dage]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50037} Result: [34, DDD, 2, 11, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-03-20 02:40:22.0, FF]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50037} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 2]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 1.033333 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50038} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50038} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50038} Result: [3, xx, 2, 122, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-24 04:06:56.0, dage]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50038} Result: [5, vv, 2, 122, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-24 04:18:31.0, dage]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50038} Result: [8, dage, 2, 6222, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-02-24 06:23:39.0, dage]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50038} Result: [34, DDD, 2, 11, https://www.pyfeige.com/static/img/bg7.png, feige, 2020-03-20 02:40:22.0, FF]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50038} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 3]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.866221 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50039} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50039} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50039} Result: [7, feige, 3, 6222, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-24 06:22:57.0, dd]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50039} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 3]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.982221 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50040} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50040} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50040} Result: [7, feige, 3, 6222, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-24 06:22:57.0, dd]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50040} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 7]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.972443 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50041} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50041} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50041} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 7]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.968888 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50042} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50042} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50042} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 7]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.689333 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50043} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50043} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50043} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 7]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.578666 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50044} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50044} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50044} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 7]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.587999 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50045} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50045} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50045} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 6]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.587555 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50046} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50046} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50046} Result: [11, adddddddddddddddddd, 6, 222, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-26 09:24:43.0, hufeige]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50046} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 6]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.683999 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50047} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50047} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50047} Result: [11, adddddddddddddddddd, 6, 222, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-26 09:24:43.0, hufeige]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50047} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 11]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.565777 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50048} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50048} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50048} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 12]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.540444 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50049} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50049} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50049} Result: [13, aaaaaa, 12, 0, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-26 09:55:11.0, dage]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50049} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 12]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.597778 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50050} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50050} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50050} Result: [13, aaaaaa, 12, 0, https://www.pyfeige.com/static/img/4.jpg, dage, 2020-02-26 09:55:11.0, dage]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50050} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 13]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.576444 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50051} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50051} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50051} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 14]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.665332 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50052} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50052} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50052} Result: [15, dffffffffffffffffffffffffffffff, 14, 0, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-26 10:13:13.0, dd]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50052} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 14]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.581777 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50053} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50053} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50053} Result: [15, dffffffffffffffffffffffffffffff, 14, 0, https://www.pyfeige.com/static/img/bg7.png, dd, 2020-02-26 10:13:13.0, dd]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50053} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 15]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.519111 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50054} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50054} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50054} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 16]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.456889 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50055} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50055} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50055} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 17]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.463556 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50056} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50056} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50056} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 18]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.531555 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50057} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50057} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50057} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 19]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.470222 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50058} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50058} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50058} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 20]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.519999 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50059} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50059} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50059} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 21]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.630221 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50060} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50060} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50060} Result: [23, aaaaaaaaaaaaaaaaaaaa, 21, 0, https://www.pyfeige.com/static/img/3.png, sss, 2020-02-26 21:26:14.0, sss]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50060} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 21]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.594222 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50061} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50061} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50061} Result: [23, aaaaaaaaaaaaaaaaaaaa, 21, 0, https://www.pyfeige.com/static/img/3.png, sss, 2020-02-26 21:26:14.0, sss]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50061} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 23]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 0.566666 millis. select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=? and c.user_id=u.id and
+        c.parent_id =?;
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50062} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50062} Header: [id, content, parent_id, good, head_photo, username, create_time, replier]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50062} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Parameters : [34]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} Types : [INTEGER]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} executed. 10.635101 millis. delete from `comments` where id=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20005} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} created. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where username=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [feige]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 11.247101 millis. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where username=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, head_photo, username, email, password, sex, register_time, hobby, self_introduce, other]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [1, https://www.pyfeige.com/static/img/bg7.png, feige, 111, 123456, true, 2020-02-22 23:51:01.0, 等待, 得到的, 语言]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} created. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where username=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [feige]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 8.565325 millis. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where username=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, head_photo, username, email, password, sex, register_time, hobby, self_introduce, other]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [1, https://www.pyfeige.com/static/img/bg7.png, feige, 111, 123456, true, 2020-02-22 23:51:01.0, 等待, 得到的, 语言]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} created. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where username=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [feige]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 7.911104 millis. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where username=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, head_photo, username, email, password, sex, register_time, hobby, self_introduce, other]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [1, https://www.pyfeige.com/static/img/bg7.png, feige, 111, 123456, true, 2020-02-22 23:51:01.0, 等待, 得到的, 语言]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} created. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where username=?
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [feige]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [VARCHAR]
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 8.832436 millis. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where username=?
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, head_photo, username, email, password, sex, register_time, hobby, self_introduce, other]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [1, https://www.pyfeige.com/static/img/bg7.png, feige, 111, 123456, true, 2020-02-22 23:51:01.0, 等待, 得到的, 语言]
+[DEBUG][20-03-19][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-19][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-19][druid.sql.Connection]{conn-10005} pool-recycle

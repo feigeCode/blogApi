@@ -1,24 +1,26 @@
 package com.feige.controller;
 
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.feige.common.utils.DateFormatter;
+import com.feige.common.utils.ResultAjax;
+import com.feige.common.utils.SelectParam;
 import com.feige.dao.CommentMapper;
 import com.feige.pojo.Comment;
 import com.feige.pojo.CommentAndReplies;
 import com.feige.service.CommentService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-
+import java.util.Map;
+@Api(tags = "评论增删查接口")
 @RestController
-@RequestMapping("comment")
+@RequestMapping("/api/comment")
 public class CommentController {
 
     @Autowired
@@ -27,68 +29,72 @@ public class CommentController {
     @Autowired
     CommentMapper commentMapper;
 
-    @RequestMapping("getComments")
-    public String getComments(Integer blogId,Integer page,Integer count) {
-        HashMap<Object, Object> map = new HashMap<>();
+    @ApiOperation(value = "查询某一篇博客的所有评论")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "blogId",value = "博客ID",required = true),
+            @ApiImplicitParam(name = "page",value = "页码",required = true),
+            @ApiImplicitParam(name = "count",value = "页数",required = true),
+    })
+    @GetMapping("/getComments")
+    public ResultAjax getComments(Integer blogId,Integer page,Integer count) {
+        Map<Object, Object> map = new HashMap<>();
         map.put("blogId",blogId);
         map.put("page",(page-1)*count);
         map.put("count",count);
-        int total = commentMapper.getCount1(map);
+        int total = commentMapper.getCount1(blogId);
         List<CommentAndReplies> commentAndReplies = commentService.getCommentAndReplies(map);
-        ObjectMapper mapper = new ObjectMapper();
-        try {
-            String str = "{\"total\":" + total + ",\"commentAndReplies\":" + mapper.writeValueAsString(commentAndReplies) + "}";
-            return str;
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
-        return null;
+        return ResultAjax.success(commentAndReplies,total);
     }
-    @RequestMapping("/getAllComment")
-    public String getAllComment(Integer page,Integer limit,String searchContent){
-        HashMap<Object, Object> map = new HashMap<>();
-        map.put("page",(page-1)*limit);
-        map.put("count",limit);
-        map.put("searchContent",searchContent);
-        List<Comment> allComment = commentMapper.getAllComment(map);
-        int count2 = commentMapper.getCount2(map);
-        ObjectMapper mapper = new ObjectMapper();
-        try {
-            return "{\"code\":0,\"msg\":\"\",\"count\":" + count2 + ",\"data\":" + mapper.writeValueAsString(allComment) + "}";
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
-        return null;
+    @ApiOperation(value = "查询所有评论和回复")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "page",value = "页码",required = true),
+            @ApiImplicitParam(name = "limit",value = "每页条数",required = true),
+            @ApiImplicitParam(name = "searchContent",value = "搜索内容")
+    })
+    @GetMapping("/getAllComment")
+    public ResultAjax getAllComment(Integer page, Integer limit, String searchContent){
+        List<Comment> allComment = commentMapper.getAllComment(new SelectParam(page,limit,searchContent));
+        int count2 = commentMapper.getCount2(searchContent);
+        return ResultAjax.success(allComment,count2);
     }
-    @RequestMapping("/deleteComment/{id}")
-    public String deleteBlog(@PathVariable("id") Integer id){
-        String status = null;
+    @ApiOperation(value = "删除一条评论")
+    @ApiImplicitParam(name = "id",value = "ID",required = true)
+    @DeleteMapping("/deleteComment/{id}")
+    public ResultAjax deleteBlog(@PathVariable("id") Integer id){
         int delete = commentMapper.deleteComment(id);
-        if(delete == 1){
-            status = "SUCCESS";
+        if (delete == 1){
+            return ResultAjax.success();
+        }else {
+            return ResultAjax.error();
         }
-        return status;
     }
     //#{content},#{parentId},#{good},#{createTime},#{replier},#{blogId},#{userId}
-    @RequestMapping("/addComment")
-    public String addComment(String content, Integer parentId, Integer good, String replier, Integer blogId, Integer userId){
-        String status = null;
-        Date date = new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String createTime = simpleDateFormat.format(date);
-        HashMap<Object, Object> map = new HashMap<>();
+    @ApiOperation(value = "增加一条评论")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "content",value = "内容",required = true),
+            @ApiImplicitParam(name = "parentId",value = "父评论的ID"),
+            @ApiImplicitParam(name = "good",value = "点赞量",required = true),
+            @ApiImplicitParam(name = "replier",value = "被回复者"),
+            @ApiImplicitParam(name = "blogId",value = "博客ID",required = true),
+            @ApiImplicitParam(name = "userId",value = "用户ID",required = true),
+    })
+    @PostMapping("/addComment")
+    public ResultAjax addComment(String content, Integer parentId, Integer good, String replier, Integer blogId, Integer userId){
+        Map<Object, Object> map = new HashMap<>();
         map.put("content",content);
         map.put("parentId",parentId);
         map.put("good",good);
-        map.put("createTime",createTime);
+        map.put("createTime", DateFormatter.timeFormatter());
         map.put("replier",replier);
         map.put("blogId",blogId);
         map.put("userId",userId);
         //System.out.println(map);
         int i = commentMapper.addComment(map);
         if(i == 1){
-            status = "SUCCESS";
+            return ResultAjax.success();
+        }else {
+            return ResultAjax.error();
         }
-        return status;
+
     }
 }

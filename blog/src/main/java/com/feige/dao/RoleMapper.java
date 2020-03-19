@@ -1,11 +1,11 @@
 package com.feige.dao;
 
+import com.feige.common.utils.SelectParam;
 import com.feige.pojo.Role;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Map;
 
 @Mapper
 @Repository
@@ -14,9 +14,10 @@ public interface RoleMapper {
     int addRole(Role role);
     int deleteRole(String roleName);
     int updateRole(Role role);
-    List<Role> getRoles(Map map);
+    List<Role> getRoles(SelectParam selectParam);
     Role getRole(String roleName);
-    int getCount(Map map);
+    Role getRoleById(Integer id);
+    int getCount(String searchContent);
 }
 
 

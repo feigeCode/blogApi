@@ -1,109 +1,132 @@
 package com.feige.controller;
 
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.feige.common.constants.Constants;
+import com.feige.common.utils.DateFormatter;
+import com.feige.common.utils.ResultAjax;
+import com.feige.common.utils.SelectParam;
+import com.feige.common.utils.StringUtils;
 import com.feige.pojo.Blog;
 import com.feige.service.BlogService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 
+@Api(tags = "博客的增删改查接口")
 @RestController
-@RequestMapping("/blog")
+@RequestMapping("/api/blog")
 public class BlogController {
     @Autowired
     BlogService blogService;
 
+    /**
+     * 按条数查询博客
+     * @param page
+     * @param limit
+     * @param searchContent
+     * @return
+     */
+    @ApiOperation(value = "按条数查询博客")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "page",value = "页码",required = true),
+            @ApiImplicitParam(name = "limit",value = "每页条数",required = true),
+            @ApiImplicitParam(name = "searchContent",value = "搜索内容")
+    })
+    @GetMapping("/getBlogs")
+    public ResultAjax getBlogs(Integer page, Integer limit, String searchContent){
 
+        List<Blog> blogs = blogService.getBlogs(new SelectParam(page,limit,searchContent));
+        int blogCount = blogService.getCount(searchContent);
+        return ResultAjax.success(blogs,blogCount);
+    }
 
-
-    @RequestMapping("/getBlogs")
-    public String getBlogs(Integer page,Integer limit,String searchContent){
-        HashMap<Object, Object> map = new HashMap<>();
-        map.put("page",(page-1)*limit);
-        map.put("count",limit);
-        map.put("searchContent",searchContent);
-        List<Blog> blogs = blogService.getBlogs(map);
-        int blogCount = blogService.getCount(map);
-        ObjectMapper mapper = new ObjectMapper();
-        try {
-            return "{\"code\":0,\"msg\":\"\",\"count\":" + blogCount + ",\"data\":" + mapper.writeValueAsString(blogs) + "}";
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-    @RequestMapping("/addBlog")
-    public String addBlog(Integer id,String  typeName,String title,String content,Integer view,String author){
-        String status = null;
-        Date date = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String createTime = format.format(date);
-        Blog blog1 = new Blog(id,typeName,title,content,createTime,createTime,author,view);
-        Blog blog2 = blogService.getBlog(id);
-        if(blog2 == null){
-            int  add = blogService.addBlog(blog1);
-            if(add == 1){
-                status = "SUCCESS";
-            }
-        }else {
-            status = "exist";
-        }
-        return status;
-    }
-    @RequestMapping("/deleteBlog/{title}")
-    public String deleteBlog(@PathVariable("title") String title){
-        String status = null;
-        int delete = blogService.deleteBlog(title);
-        if(delete == 1){
-            status = "SUCCESS";
-        }
-        return status;
-    }
-    @RequestMapping("/updateBlog/{id}/{oldBlogName}")
-    public String updateBlog(@PathVariable("oldBlogName") String oldBlogName,@PathVariable("id") Integer id,String  typeName,String title,String content,String createTime,Integer view,String author){
-        String status = null;
-        Date date = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String changeTime = format.format(date);
-        Blog blog1 = new Blog(id,typeName,title,content,createTime,changeTime,author,view);
-        if(title.equals(oldBlogName)){
-            int update = blogService.updateBlog(blog1);
-            if(update == 1){
-                status = "SUCCESS";
-            }
-        }else {
-            Blog blog2 = blogService.getBlog(id);
-            if(!(blog2.getTitle().equals(title))){
-                int update = blogService.updateBlog(blog1);
-                if(update == 1){
-                    status = "SUCCESS";
-                }
+    /**
+     *
+     * @param typeName
+     * @param title
+     * @param content
+     * @param view
+     * @param author
+     * @return
+     */
+    @ApiOperation(value = "增加一篇博客")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "typeName", value = "所属类型", required = true),
+            @ApiImplicitParam(name = "title", value = "标题", required = true),
+            @ApiImplicitParam(name = "content", value = "内容", required = true),
+            @ApiImplicitParam(name = "view", value = "浏览量", required = true),
+            @ApiImplicitParam(name = "author", value = "作者", required = true),
+    })
+    @PostMapping("/addBlog")
+    public ResultAjax addBlog(String  typeName,String title,String content,Integer view,String author){
+        Blog blog = blogService.getBlog(title);
+        if (StringUtils.isNull(blog)){
+            int add = blogService.addBlog(new Blog(0, typeName, title, content, DateFormatter.timeFormatter(), DateFormatter.timeFormatter(), author, view));
+            if (add == 1){
+                return ResultAjax.success();
             }else {
-                status = "exist";
+                return ResultAjax.error();
             }
+        }else {
+            return ResultAjax.error(Constants.EXIST);
         }
-        return status;
     }
-    @RequestMapping("/getBlog")
-    public String getBlog(Integer id){
-        ObjectMapper mapper = new ObjectMapper();
-        Blog blog = blogService.getBlog(id);
-        //System.out.println(blog.getContent());
-        String str = null;
-        try {
-            str = mapper.writeValueAsString(blog);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
+
+    /**
+     *
+     * @param title
+     * @return
+     */
+    @ApiOperation(value = "删除一篇博客")
+    @ApiImplicitParam(name = "title",value = "标题",required = true)
+    @DeleteMapping("/deleteBlog/{title}")
+    public ResultAjax deleteBlog(@PathVariable("title") String title){
+        int delete = blogService.deleteBlog(title);
+        if (delete == 1){
+            return ResultAjax.success();
+        }else {
+            return ResultAjax.error();
         }
-        return str;
+    }
+
+    /**
+     *
+     * @param id
+     * @param typeName
+     * @param title
+     * @param content
+     * @param createTime
+     * @param view
+     * @param author
+     * @return
+     */
+    @ApiOperation(value = "修改一篇博客")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "typeName", value = "所属类型", required = true),
+            @ApiImplicitParam(name = "title", value = "标题", required = true),
+            @ApiImplicitParam(name = "content", value = "内容", required = true),
+            @ApiImplicitParam(name = "view", value = "浏览量", required = true),
+            @ApiImplicitParam(name = "author", value = "作者", required = true),
+            @ApiImplicitParam(name = "id", value = "ID", required = true),
+            @ApiImplicitParam(name = "createTime", value = "创建日期", required = true),
+    })
+    @PutMapping("/updateBlog/{id}")
+    public ResultAjax updateBlog(@PathVariable("id") Integer id,String  typeName,String title,String content,String createTime,Integer view,String author){
+        if (blogService.getBlogById(id).getTitle().equals(title) || StringUtils.isNull(blogService.getBlog(title))){
+            int update = blogService.updateBlog(new Blog(id, typeName, title, content, createTime, DateFormatter.timeFormatter(), author, view));
+            if (update == 1){
+                return ResultAjax.success();
+            }else {
+                return ResultAjax.error();
+            }
+        }else {
+            return ResultAjax.error(Constants.EXIST);
+        }
 
     }
 }

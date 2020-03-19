@@ -56,7 +56,6 @@ public class UserController {
     })
     @PostMapping("/addUser")
     public ResultAjax addUser(String  headPhoto,String username,String email,String password,Integer sex,String hobby,String selfIntroduce,String other){
-
         User user = userService.getUser(username);
         if(StringUtils.isNull(user)){
             int  add = userService.addUser(new User(0,headPhoto,username,email,password,sex, DateFormatter.timeFormatter(),hobby,selfIntroduce,other));

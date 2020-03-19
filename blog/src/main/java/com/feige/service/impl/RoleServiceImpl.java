@@ -1,5 +1,6 @@
 package com.feige.service.impl;
 
+import com.feige.common.utils.SelectParam;
 import com.feige.dao.RoleMapper;
 import com.feige.pojo.Role;
 import com.feige.service.RoleService;
@@ -7,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class RoleServiceImpl implements RoleService {
@@ -31,17 +31,22 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
-    public List<Role> getRoles(Map map) {
-        return roleMapper.getRoles(map);
+    public List<Role> getRoles(SelectParam selectParam) {
+        return roleMapper.getRoles(selectParam);
     }
-
     @Override
     public Role getRole(String roleName) {
         return roleMapper.getRole(roleName);
     }
 
     @Override
-    public int getCount(Map map) {
-        return roleMapper.getCount(map);
+    public Role getRoleById(Integer id) {
+        return roleMapper.getRoleById(id);
     }
+
+    @Override
+    public int getCount(String searchContent) {
+        return roleMapper.getCount(searchContent);
+    }
+
 }

@@ -10,25 +10,28 @@
     <delete id="deleteBlog" parameterType="String">
         delete from `blog` where title=#{title}
     </delete>
-    <update id="updateBlog" parameterType="Admin">
+    <update id="updateBlog" parameterType="Blog">
         update `blog` set type_name=#{typeName},title=#{title},content=#{content},create_time=#{createTime},change_time=#{changeTime},author=#{author},view=#{view} where id=#{id}
     </update>
-    <select id="getBlogs" resultType="Blog" parameterType="map">
+    <select id="getBlogs" resultType="Blog" parameterType="com.feige.common.utils.SelectParam">
         select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog
         <if test="searchContent==null">
-            limit #{page},#{count}
+            limit #{page},#{limit}
         </if>
         <if test="searchContent!=null">
-            where title like "%"#{searchContent}"%" or content like "%"#{searchContent}"%" limit #{page},#{count}
+            where title like #{searchContent} or content like #{searchContent} limit #{page},#{limit}
         </if>
     </select>
-    <select id="getBlog" resultType="Blog" parameterType="Integer">
+    <select id="getBlogById" resultType="Blog" parameterType="Integer">
         select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=#{id}
     </select>
-    <select id="getCount" resultType="int" parameterType="map">
+    <select id="getBlog" resultType="Blog" parameterType="String">
+        select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=#{searchContent}
+    </select>
+    <select id="getCount" resultType="int" parameterType="String">
         select count(*) from `blog`
         <if test="searchContent!=null">
-            where title like "%"#{searchContent}"%" or content like "%"#{searchContent}"%"
+            where title like #{searchContent} or content like #{searchContent}
         </if>
     </select>
 </mapper>

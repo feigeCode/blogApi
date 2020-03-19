@@ -16,33 +16,33 @@
         where c.blog_id=#{blogId} and c.user_id=u.id  and
         c.parent_id is null limit #{page},#{count};;
     </select>
-    <select id="getReplys" resultType="Comment" parameterType="map">
+    <select id="getReplies" resultType="Comment" parameterType="map">
         select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
         username,c.create_time createTime,replier from blog b,comments c,user u
         where c.blog_id=#{blogId} and c.user_id=u.id and
         c.parent_id =#{parentId};
 
     </select>
-    <select id="getCount1" resultType="int" parameterType="map">
+    <select id="getCount1" resultType="int" parameterType="Integer">
         select distinct count(*) from comments c
         where c.blog_id=#{blogId} and
         c.parent_id is null;
     </select>
 
-    <select id="getAllComment" resultType="Comment" parameterType="map">
+    <select id="getAllComment" resultType="Comment" parameterType="com.feige.common.utils.SelectParam">
         select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,username,c.create_time createTime,replier from blog b,comments c,user u
         <if test="searchContent==null">
-            where c.blog_id=b.id and c.user_id=u.id limit #{page},#{count};
+            where c.blog_id=b.id and c.user_id=u.id limit #{page},#{limit};
         </if>
         <if test="searchContent!=null">
-            where c.blog_id=b.id and c.user_id=u.id and c.content like "%"#{searchContent}"%" limit #{page},#{count}
+            where c.blog_id=b.id and c.user_id=u.id and c.content like #{searchContent} limit #{page},#{limit}
         </if>
     </select>
-    <select id="getCount2" resultType="int" parameterType="map">
+    <select id="getCount2" resultType="int" parameterType="String">
         select distinct count(*) from blog b,comments c,user u
         where c.blog_id=b.id and c.user_id=u.id
         <if test="searchContent!=null">
-            and c.content like "%"#{searchContent}"%"
+            and c.content=#{searchContent}
         </if>
     </select>
 </mapper>

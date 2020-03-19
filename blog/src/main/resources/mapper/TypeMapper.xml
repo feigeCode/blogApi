@@ -13,20 +13,23 @@
     <update id="updateType" parameterType="Type">
         update `type` set type_name=#{typeName} where id=#{id}
     </update>
-    <select id="getTypes" resultType="Type" parameterType="map">
+    <select id="getTypes" resultType="Type" parameterType="com.feige.common.utils.SelectParam">
         select id,type_name typeName
         from `type`
         <if test="searchContent==null">
-            limit #{page},#{count}
+            limit #{page},#{limit}
         </if>
         <if test="searchContent!=null">
-            where type_name=#{searchContent}
+            where type_name like #{searchContent} limit #{page},#{limit}
         </if>
     </select>
     <select id="getType" parameterType="String" resultType="Type">
         select id,type_name typeName from `type` where type_name=#{typeName}
     </select>
-    <select id="getCount" parameterType="map" resultType="int">
+    <select id="getTypeById" parameterType="Integer" resultType="Type">
+        select id,type_name typeName from `type` where id=#{id}
+    </select>
+    <select id="getCount" parameterType="String" resultType="int">
         select count(*) from `type`
         <if test="searchContent!=null">
             where type_name=#{searchContent}

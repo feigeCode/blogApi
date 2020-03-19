@@ -96,4 +96,7 @@ public class Constants {
 
     //用户已存在
     public static final String EXIST = "该用户已存在";
+    public static final String NO_PERMISSION = "未授权";
+    public static final String USERNAME_NO_EXIST = "用户名不存在";
+    public static final String PASSWORD_ERROR = "密码错误";
 }

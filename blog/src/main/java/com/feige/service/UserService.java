@@ -1,6 +1,7 @@
 package com.feige.service;
 
 import com.feige.common.utils.SelectParam;
+import com.feige.pojo.Role;
 import com.feige.pojo.User;
 
 import java.util.List;
@@ -15,4 +16,5 @@ public interface UserService {
     User getUserById(Integer id);
     int getCount(String username);
     User getUser(String username);
+    List<Role> getPermissions(SelectParam selectParam);
 }

@@ -1,5 +1,6 @@
 package com.feige.service.impl;
 
+import com.feige.common.utils.SelectParam;
 import com.feige.dao.TypeMapper;
 import com.feige.pojo.Type;
 import com.feige.service.TypeService;
@@ -7,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 
 
 @Service
@@ -32,8 +32,8 @@ public class TypeServiceImpl implements TypeService {
     }
 
     @Override
-    public List<Type> getTypes(Map map) {
-        return typeMapper.getTypes(map);
+    public List<Type> getTypes(SelectParam selectParam) {
+        return typeMapper.getTypes(selectParam);
     }
 
     @Override
@@ -42,7 +42,13 @@ public class TypeServiceImpl implements TypeService {
     }
 
     @Override
-    public int getCount(Map map) {
-        return typeMapper.getCount(map);
+    public Type getTypeById(Integer id) {
+        return typeMapper.getTypeById(id);
     }
+
+    @Override
+    public int getCount(String searchContent) {
+        return typeMapper.getCount(searchContent);
+    }
+
 }

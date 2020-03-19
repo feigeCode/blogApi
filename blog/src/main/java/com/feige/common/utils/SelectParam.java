@@ -10,6 +10,11 @@ public class SelectParam {
         this.limit = limit;
         this.searchContent = searchContent!=null?"%"+searchContent+"%":null;
     }
+    public SelectParam(String searchContent) {
+        this.page = 0;
+        this.limit = 1;
+        this.searchContent = searchContent;
+    }
     public int getPage() {
         return page;
     }

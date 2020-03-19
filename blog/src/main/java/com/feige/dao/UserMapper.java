@@ -1,6 +1,7 @@
 package com.feige.dao;
 
 import com.feige.common.utils.SelectParam;
+import com.feige.pojo.Role;
 import com.feige.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
@@ -19,6 +20,8 @@ public interface UserMapper {
     User getUserById(Integer id);
     int getCount(String username);
     User getUser(String username);
+    List<Role> getPermissions(SelectParam selectParam);
+
 }
 
 

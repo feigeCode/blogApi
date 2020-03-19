@@ -38,9 +38,9 @@ public class ShiroConfig {
         //支持通配符linkedHashMap.put("/*","authc");
         bean.setFilterChainDefinitionMap(linkedHashMap);
         //设置登录请求
-        bean.setLoginUrl("/toLogin");
+        bean.setLoginUrl("/login");
         //未授权请求
-        bean.setUnauthorizedUrl("/noPermission");
+        bean.setUnauthorizedUrl("/login?permission=no");
         //bean.setSuccessUrl("/index");
         return bean;
     }

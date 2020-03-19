@@ -36,11 +36,11 @@ public class CommentServiceIpl implements CommentService {
     //递归找出所有的回复，把它放在list中，输出到最顶级评论的下边
     public void getAllReply(Comment comment, Map map){
         map.put("parentId",comment.getId());
-        List<Comment> replys = commentMapper.getReplys(map);
-        if(replys.size()>0){
-            for (Comment reply : replys) {
+        List<Comment> replies = commentMapper.getReplies(map);
+        if(replies.size()>0){
+            for (Comment reply : replies) {
                 commentList.add(reply);
-                if(commentMapper.getReplys(map).size()>0){
+                if(commentMapper.getReplies(map).size()>0){
                     map.remove("parentId");
                     getAllReply(reply,map);
                 }

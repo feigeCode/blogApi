@@ -1,15 +1,16 @@
 package com.feige.service;
 
+import com.feige.common.utils.SelectParam;
 import com.feige.pojo.Blog;
 
 import java.util.List;
-import java.util.Map;
 
 public interface BlogService {
-    List<Blog> getBlogs(Map map);
-    int getCount(Map map);
+    List<Blog> getBlogs(SelectParam selectParam);
+    int getCount(String searchContent);
     int updateBlog(Blog blog);
     int addBlog(Blog blog);
     int deleteBlog(String title);
-    Blog getBlog(Integer id);
+    Blog getBlogById(Integer id);
+    Blog getBlog(String searchContent);
 }
