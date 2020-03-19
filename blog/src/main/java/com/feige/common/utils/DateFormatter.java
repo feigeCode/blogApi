@@ -1,9 +1,9 @@
-package com.feige.common.utils.redis;
+package com.feige.common.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class TimeFormatter {
+public class DateFormatter {
     public static String timeFormatter(Date date, String pattern){
         SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
         return dateFormat.format(date);

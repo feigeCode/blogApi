@@ -5,7 +5,7 @@ import com.feige.common.constants.Constants;
 import com.feige.common.utils.ResultAjax;
 import com.feige.common.utils.SelectParam;
 import com.feige.common.utils.StringUtils;
-import com.feige.common.utils.redis.TimeFormatter;
+import com.feige.common.utils.DateFormatter;
 import com.feige.pojo.User;
 import com.feige.service.UserService;
 import io.swagger.annotations.Api;
@@ -59,7 +59,7 @@ public class UserController {
 
         User user = userService.getUser(username);
         if(StringUtils.isNull(user)){
-            int  add = userService.addUser(new User(0,headPhoto,username,email,password,sex, TimeFormatter.timeFormatter(),hobby,selfIntroduce,other));
+            int  add = userService.addUser(new User(0,headPhoto,username,email,password,sex, DateFormatter.timeFormatter(),hobby,selfIntroduce,other));
             if(add == 1){
                 return ResultAjax.success();
             } else {
