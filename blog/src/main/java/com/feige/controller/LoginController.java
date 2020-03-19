@@ -2,8 +2,13 @@ package com.feige.controller;
 
 import com.feige.common.constants.Constants;
 import com.feige.common.utils.ResultAjax;
+import com.feige.common.utils.SelectParam;
 import com.feige.common.utils.StringUtils;
 import com.feige.common.utils.redis.RedisCache;
+import com.feige.pojo.LoginUser;
+import com.feige.pojo.Role;
+import com.feige.service.TokenService;
+import com.feige.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -18,7 +23,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.concurrent.TimeUnit;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Api(tags = "登录接口")
 @RestController
@@ -26,18 +33,36 @@ public class LoginController {
     @Autowired
     RedisCache redisCache;
 
+    @Autowired
+    TokenService tokenService;
+
+    @Autowired
+    UserService userService;
 
     @ApiOperation(value = "登录接口")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "username",value = "用户名",required = true),
             @ApiImplicitParam(name = "password",value = "密码",required = true),
             @ApiImplicitParam(name = "rememberMe",value = "记住我"),
-            @ApiImplicitParam(name = "permission",value = "该空不填")
+            @ApiImplicitParam(name = "permission",value = "该空不填"),
+            @ApiImplicitParam(name = "code",value = "验证码",required = true),
+            @ApiImplicitParam(name = "uuid",value = "UUID",required = true),
     })
     @PostMapping("/login")
-    public ResultAjax login(String username, String password, @RequestParam(value="rememberMe", defaultValue="0") Integer rememberMe,String permission){
+    public ResultAjax login(String username, String password, @RequestParam(value="rememberMe", defaultValue="0") Integer rememberMe,String permission,String uuid,String code){
         if (!StringUtils.isEmpty(permission)){
             return ResultAjax.error(Constants.NO_PERMISSION);
+        }
+        //验证码的key值
+        String verifyKey = Constants.CAPTCHA_CODE_KEY + uuid;
+        //把验证码从redis中取出
+        String captcha = redisCache.getCacheObject(verifyKey);
+        //删除redis中的验证码
+        redisCache.deleteObject(verifyKey);
+        if (captcha == null){
+            return ResultAjax.error(Constants.CAPTCHA_EXPIRED);
+        } else if(!code.equalsIgnoreCase(captcha)){
+            return ResultAjax.error(Constants.CAPTCHA_ERROR);
         }
         //获取当前用户
         Subject subject = SecurityUtils.getSubject();
@@ -49,7 +74,12 @@ public class LoginController {
         }
         try {
             subject.login(token);//执行登录方法
-            redisCache.setCacheObject(Constants.LOGIN_USER_KEY,token,30, TimeUnit.MINUTES);
+            Set<String> set = new HashSet<>();
+            List<Role> permissions = userService.getPermissions(new SelectParam(username));
+            for (Role role : permissions) {
+                set.add(role.getRoleName());
+            }
+            tokenService.createToken(new LoginUser(userService.getUser(username),set));
             //Session session = subject.getSession();
             //session.setAttribute("loginUser",username);
             return ResultAjax.success();

@@ -6,6 +6,7 @@ import com.feige.common.utils.ResultAjax;
 import com.feige.common.utils.SelectParam;
 import com.feige.common.utils.StringUtils;
 import com.feige.common.utils.DateFormatter;
+import com.feige.pojo.Role;
 import com.feige.pojo.User;
 import com.feige.service.UserService;
 import io.swagger.annotations.Api;
@@ -134,5 +135,12 @@ public class UserController {
         }else {
             return ResultAjax.error(Constants.EXIST);
         }
+    }
+    @ApiOperation(value = "查询指定用户的权限")
+    @ApiImplicitParam(name = "username",value = "用户名",required = true)
+    @GetMapping("/getPermissions")
+    public ResultAjax getPermissions(String username){
+        List<Role> permissions = userService.getPermissions(new SelectParam(username));
+        return ResultAjax.success(permissions);
     }
 }

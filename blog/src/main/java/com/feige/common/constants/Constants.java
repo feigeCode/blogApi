@@ -99,4 +99,6 @@ public class Constants {
     public static final String NO_PERMISSION = "未授权";
     public static final String USERNAME_NO_EXIST = "用户名不存在";
     public static final String PASSWORD_ERROR = "密码错误";
+    public static final String CAPTCHA_ERROR = "验证码错误";
+    public static final String CAPTCHA_EXPIRED = "验证码已过期";
 }

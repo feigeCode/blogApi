@@ -32,7 +32,7 @@ public class ShiroConfig {
          */
         LinkedHashMap<String, String> linkedHashMap = new LinkedHashMap<>();
         //添加权限
-        linkedHashMap.put("/index1","perms[user:update]");
+        linkedHashMap.put("","perms[user:update]");
         linkedHashMap.put("/index","perms[user:index]");
         linkedHashMap.put("/","user");
         //支持通配符linkedHashMap.put("/*","authc");
