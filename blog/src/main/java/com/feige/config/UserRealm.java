@@ -3,6 +3,7 @@ package com.feige.config;
 import com.feige.common.utils.SelectParam;
 import com.feige.pojo.Role;
 import com.feige.pojo.User;
+import com.feige.service.PermissionService;
 import com.feige.service.UserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
@@ -19,6 +20,9 @@ import java.util.HashSet;
 public class UserRealm extends AuthorizingRealm {
     @Autowired
     UserService userService;
+
+    @Autowired
+    PermissionService permissionService;
     //授权
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
@@ -32,7 +36,7 @@ public class UserRealm extends AuthorizingRealm {
         //Admin admin = adminService.getAdmin(username);
         //把该用户的所有权限封装成一个set集合
         HashSet<String> roles = new HashSet<>();
-        for (Role role : userService.getPermissions(new SelectParam(username))) {
+        for (Role role : permissionService.getPermissions(new SelectParam(username))) {
             roles.add(role.getPermission());
         }
         //给用户授权

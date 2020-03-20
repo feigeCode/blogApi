@@ -13,7 +13,7 @@ import java.util.Map;
 
 
 @Service
-public class CommentServiceIpl implements CommentService {
+public class CommentServiceImpl implements CommentService {
     @Autowired
     private CommentMapper commentMapper;
 

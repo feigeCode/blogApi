@@ -2,7 +2,6 @@ package com.feige.service.impl;
 
 import com.feige.common.utils.SelectParam;
 import com.feige.dao.UserMapper;
-import com.feige.pojo.Role;
 import com.feige.pojo.User;
 import com.feige.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,8 +48,5 @@ public class UserServiceImpl implements UserService {
         return userMapper.getUser(username);
     }
 
-    @Override
-    public List<Role> getPermissions(SelectParam selectParam) {
-        return userMapper.getPermissions(selectParam);
-    }
+
 }

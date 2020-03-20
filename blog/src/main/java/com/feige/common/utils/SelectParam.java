@@ -1,8 +1,12 @@
 package com.feige.common.utils;
 
+/**
+ * 该类是用来接收前端传来的参数，再传给dao层
+ */
 public class SelectParam {
     private int page;
     private int limit;
+    private int id;
     private String searchContent;
 
     public SelectParam(int page, int limit, String searchContent) {
@@ -10,11 +14,23 @@ public class SelectParam {
         this.limit = limit;
         this.searchContent = searchContent!=null?"%"+searchContent+"%":null;
     }
+    public SelectParam(int page, int limit,int id) {
+        this.page = (page-1)*limit;
+        this.limit = limit;
+        this.id = id;
+    }
     public SelectParam(String searchContent) {
-        this.page = 0;
-        this.limit = 1;
         this.searchContent = searchContent;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public int getPage() {
         return page;
     }

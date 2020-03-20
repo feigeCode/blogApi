@@ -2,12 +2,14 @@ package com.feige.controller;
 
 
 import com.feige.common.constants.Constants;
+import com.feige.common.utils.DateFormatter;
 import com.feige.common.utils.ResultAjax;
 import com.feige.common.utils.SelectParam;
 import com.feige.common.utils.StringUtils;
-import com.feige.common.utils.DateFormatter;
+import com.feige.pojo.Permission;
 import com.feige.pojo.Role;
 import com.feige.pojo.User;
+import com.feige.service.RoleService;
 import com.feige.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -24,6 +26,9 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private RoleService roleService;
 
     /**
      * 按条数查询用户
@@ -136,11 +141,6 @@ public class UserController {
             return ResultAjax.error(Constants.EXIST);
         }
     }
-    @ApiOperation(value = "查询指定用户的权限")
-    @ApiImplicitParam(name = "username",value = "用户名",required = true)
-    @GetMapping("/getPermissions")
-    public ResultAjax getPermissions(String username){
-        List<Role> permissions = userService.getPermissions(new SelectParam(username));
-        return ResultAjax.success(permissions);
-    }
+
+
 }

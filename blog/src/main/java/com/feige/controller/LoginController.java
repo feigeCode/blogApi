@@ -7,6 +7,7 @@ import com.feige.common.utils.StringUtils;
 import com.feige.common.utils.redis.RedisCache;
 import com.feige.pojo.LoginUser;
 import com.feige.pojo.Role;
+import com.feige.service.PermissionService;
 import com.feige.service.TokenService;
 import com.feige.service.UserService;
 import io.swagger.annotations.Api;
@@ -38,6 +39,9 @@ public class LoginController {
 
     @Autowired
     UserService userService;
+
+    @Autowired
+    private PermissionService permissionService;
 
     @ApiOperation(value = "登录接口")
     @ApiImplicitParams({
@@ -75,14 +79,17 @@ public class LoginController {
         try {
             subject.login(token);//执行登录方法
             Set<String> set = new HashSet<>();
-            List<Role> permissions = userService.getPermissions(new SelectParam(username));
+            List<Role> permissions = permissionService.getPermissions(new SelectParam(username));
             for (Role role : permissions) {
                 set.add(role.getRoleName());
             }
-            tokenService.createToken(new LoginUser(userService.getUser(username),set));
+            LoginUser loginUser = new LoginUser(userService.getUser(username), set);
+            tokenService.createToken(loginUser);
             //Session session = subject.getSession();
             //session.setAttribute("loginUser",username);
-            return ResultAjax.success();
+            ResultAjax ajax = ResultAjax.success();
+            ajax.put(Constants.TOKEN,loginUser);
+            return ajax;
         }catch (UnknownAccountException e){
             //model.addAttribute("msg","用户名不存在");
             //System.out.println("用户名不存在");

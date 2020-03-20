@@ -2034,3 +2034,556 @@ java.sql.SQLSyntaxErrorException: Unknown column 'a.id' in 'where clause'
 [DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50002} closed
 [DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
 [DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} created. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where username=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [feige]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [VARCHAR]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 20.418204 millis. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where username=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, head_photo, username, email, password, sex, register_time, hobby, self_introduce, other]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [1, https://www.pyfeige.com/static/img/bg7.png, feige, 111, 123456, true, 2020-02-22 23:51:01.0, 等待, 得到的, 语言]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} created. select r.id id,r.role_name roleName,r.permission permission
+        from permission p,role r,user u
+         
+         
+            where u.id=p.aid and r.id=p.rid and u.username=? limit ?,?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [feige, 0, 1]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 5.242217 millis. select r.id id,r.role_name roleName,r.permission permission
+        from permission p,role r,user u
+         
+         
+            where u.id=p.aid and r.id=p.rid and u.username=? limit ?,?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Header: [id, role_name, permission]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Result: [1, user, user:select]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [feige]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [VARCHAR]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 0.733333 millis. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where username=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50002} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50002} Header: [id, head_photo, username, email, password, sex, register_time, hobby, self_introduce, other]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50002} Result: [1, https://www.pyfeige.com/static/img/bg7.png, feige, 111, 123456, true, 2020-02-22 23:51:01.0, 等待, 得到的, 语言]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50002} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [feige, 0, 1]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [VARCHAR, INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 1.931553 millis. select r.id id,r.role_name roleName,r.permission permission
+        from permission p,role r,user u
+         
+         
+            where u.id=p.aid and r.id=p.rid and u.username=? limit ?,?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50003} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50003} Header: [id, role_name, permission]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50003} Result: [1, user, user:select]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50003} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} created. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other
+        from `user`
+         
+            limit ?,?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [0, 10]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 0.642222 millis. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other
+        from `user`
+         
+            limit ?,?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50004} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50004} Header: [id, head_photo, username, email, password, sex, register_time, hobby, self_introduce, other]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50004} Result: [1, https://www.pyfeige.com/static/img/bg7.png, feige, 111, 123456, true, 2020-02-22 23:51:01.0, 等待, 得到的, 语言]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50004} Result: [2, https://www.pyfeige.com/static/img/4.jpg, dage, 345, 123456784, false, 2020-02-22 23:58:01.0, f, d, a]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50004} Result: [3, https://www.pyfeige.com/static/img/bg7.png, dd, 方法, 方法, true, 2020-02-22 23:59:39.0, 分, 分, 分]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50004} Result: [4, https://www.pyfeige.com/static/img/3.png, 1, 1, 1, true, 2020-02-23 00:58:06.0, a, a, a]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50004} Result: [5, https://www.pyfeige.com/static/img/3.png, sss, ss, ss, true, 2020-02-23 00:02:48.0, ss, sss, sss]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50004} Result: [7, https://www.pyfeige.com/static/img/3.png, t, t, t, true, 2020-02-23 00:05:35.0, t, t, t]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50004} Result: [8, https://www.pyfeige.com/static/img/3.png, b, b, b, false, 2020-02-23 00:06:27.0, b, b, b]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50004} Result: [9, f, f, f, f, false, 2020-02-23 00:07:25.0, f, f, f]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50004} Result: [10, g, g, gg, g, true, 2020-02-23 00:09:48.0, g, g, g]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50004} Result: [11, i, i, i, i, true, 2020-02-23 00:10:50.0, i, i, i]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50004} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} created. select count(*) from `user`
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} Parameters : []
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} Types : []
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} executed. 10.013324 millis. select count(*) from `user`
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50005} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50005} Header: [count(*)]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50005} Result: [19]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20003, rs-50005} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} created. select r.id id,r.role_name roleName,r.permission permission
+        from permission p,role r,user u
+         
+         
+            where u.id=p.uid and r.id=p.rid and u.id=? limit ?,?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [1, 0, 10]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER, INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 42.167962 millis. select r.id id,r.role_name roleName,r.permission permission
+        from permission p,role r,user u
+         
+         
+            where u.id=p.uid and r.id=p.rid and u.id=? limit ?,?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, role_name, permission]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [1, user, user:select]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [2, admin, admin:add]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [3, update, admin:update]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} created. select uid uId,rid rId from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [1, 1]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 10.321769 millis. select uid uId,rid rId from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [uid, rid]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [1, 1]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [1, 2]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 1.606221 millis. select uid uId,rid rId from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50001} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50001} Header: [uid, rid]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50001} Result: [1, 2]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50001} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [1, 3]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 0.669333 millis. select uid uId,rid rId from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50002} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50002} Header: [uid, rid]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50002} Result: [1, 3]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50002} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [2, 3]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 0.821777 millis. select uid uId,rid rId from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50003} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50003} Header: [uid, rid]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50003} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} created. insert into permission values(?,?)
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [2, 3]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 18.185317 millis. insert into permission values(?,?)
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} created. delete from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [2, 3]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 15.565764 millis. delete from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} created. select r.id id,r.role_name roleName,r.permission permission
+        from permission p,role r,user u
+         
+         
+            where u.id=p.uid and r.id=p.rid and u.id=? limit ?,?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [1, 0, 10]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER, INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 11.730656 millis. select r.id id,r.role_name roleName,r.permission permission
+        from permission p,role r,user u
+         
+         
+            where u.id=p.uid and r.id=p.rid and u.id=? limit ?,?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, role_name, permission]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [1, user, user:select]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [2, admin, admin:add]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [3, update, admin:update]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} created. select count(*) from permission p,role r,user u
+        where u.id=p.uid and r.id=p.rid and u.id=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [1]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 1.308444 millis. select count(*) from permission p,role r,user u
+        where u.id=p.uid and r.id=p.rid and u.id=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Header: [count(*)]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Result: [3]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} created. select uid uId,rid rId from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [2, 3]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 1.222666 millis. select uid uId,rid rId from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50002} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50002} Header: [uid, rid]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50002} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} created. insert into permission values(?,?)
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} Parameters : [2, 3]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} executed. 3.461774 millis. insert into permission values(?,?)
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20004} created. delete from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [2, 3]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 5.919994 millis. delete from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [2, 3]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 1.173777 millis. delete from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [2, 10]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 1.047555 millis. select uid uId,rid rId from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50003} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50003} Header: [uid, rid]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50003} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} Parameters : [2, 10]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} Types : [INTEGER, INTEGER]
+[ERROR][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} execute error. insert into permission values(?,?)
+java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`myblog`.`permission`, CONSTRAINT `r_rid` FOREIGN KEY (`rid`) REFERENCES `role` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3409)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:620)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy81.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy82.addPermission(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy83.addPermission(Unknown Source)
+	at com.feige.service.impl.UserServiceImpl.addPermission(UserServiceImpl.java:60)
+	at com.feige.controller.UserController.addPermission(UserController.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} closed
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} created. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where id=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [3]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 19.510649 millis. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where id=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, head_photo, username, email, password, sex, register_time, hobby, self_introduce, other]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [3, https://www.pyfeige.com/static/img/bg7.png, dd, 方法, 方法, true, 2020-02-22 23:59:39.0, 分, 分, 分]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} created. select id,role_name roleName,permission from `role` where id=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [1]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 2.201332 millis. select id,role_name roleName,permission from `role` where id=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Header: [id, role_name, permission]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Result: [1, user, user:select]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} created. select uid uId,rid rId from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [3, 1]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 2.064887 millis. select uid uId,rid rId from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50002} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50002} Header: [uid, rid]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50002} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} created. insert into permission values(?,?)
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} Parameters : [3, 1]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} executed. 3.775108 millis. insert into permission values(?,?)
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20004} created. select r.id id,r.role_name roleName,r.permission permission
+        from permission p,role r,user u
+         
+         
+            where u.id=p.uid and r.id=p.rid and u.id=? limit ?,?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20004} Parameters : [1, 0, 10]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20004} Types : [INTEGER, INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20004} executed. 4.767996 millis. select r.id id,r.role_name roleName,r.permission permission
+        from permission p,role r,user u
+         
+         
+            where u.id=p.uid and r.id=p.rid and u.id=? limit ?,?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50003} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50003} Header: [id, role_name, permission]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50003} Result: [1, user, user:select]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50003} Result: [2, admin, admin:add]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50003} Result: [3, update, admin:update]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20004, rs-50003} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20004} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20005} created. select count(*) from permission p,role r,user u
+        where u.id=p.uid and r.id=p.rid and u.id=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20005} Parameters : [1]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20005} Types : [INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20005} executed. 2.53822 millis. select count(*) from permission p,role r,user u
+        where u.id=p.uid and r.id=p.rid and u.id=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50004} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50004} Header: [count(*)]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50004} Result: [3]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20005, rs-50004} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20005} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20006} created. delete from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20006} Parameters : [3, 1]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20006} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20006} executed. 3.945774 millis. delete from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20006} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [20]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 2.081776 millis. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where id=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50005} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50005} Header: [id, head_photo, username, email, password, sex, register_time, hobby, self_introduce, other]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50005} Result: [20, x, 飞哥, x, x, true, 2020-03-19 06:48:47.0, x, x, x]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50005} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [1]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 1.195999 millis. select id,role_name roleName,permission from `role` where id=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50006} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50006} Header: [id, role_name, permission]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50006} Result: [1, user, user:select]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50006} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} Parameters : [20, 1]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} executed. 1.26711 millis. select uid uId,rid rId from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50007} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50007} Header: [uid, rid]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20002, rs-50007} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20002} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} Parameters : [20, 1]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} executed. 11.570212 millis. insert into permission values(?,?)
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20003} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20006} Parameters : [20, 1]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20006} Types : [INTEGER, INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20006} executed. 12.162655 millis. delete from permission where uid=? and rid=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20006} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [20]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 1.010666 millis. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where id=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50008} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50008} Header: [id, head_photo, username, email, password, sex, register_time, hobby, self_introduce, other]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50008} Result: [20, x, 飞哥, x, x, true, 2020-03-19 06:48:47.0, x, x, x]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50008} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [11]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 0.780444 millis. select id,role_name roleName,permission from `role` where id=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50009} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50009} Header: [id, role_name, permission]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50009} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10001} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10002} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10003} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10004} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} connected
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} created. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where id=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [20]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 23.440423 millis. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where id=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Header: [id, head_photo, username, email, password, sex, register_time, hobby, self_introduce, other]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} Result: [20, x, 飞哥, x, x, true, 2020-03-19 06:48:47.0, x, x, x]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50000} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} created. select id,role_name roleName,permission from `role` where id=?
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} Parameters : [11]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} Types : [INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} executed. 0.755999 millis. select id,role_name roleName,permission from `role` where id=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} Header: [id, role_name, permission]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20001, rs-50001} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20001} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Parameters : [55]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} Types : [INTEGER]
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} executed. 3.255109 millis. select id,head_photo headPhoto,username,email,password,sex,register_time time,hobby,self_introduce selfIntroduce,other from `user` where id=?
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50002} open
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50002} Header: [id, head_photo, username, email, password, sex, register_time, hobby, self_introduce, other]
+[DEBUG][20-03-20][druid.sql.ResultSet]{conn-10005, pstmt-20000, rs-50002} closed
+[DEBUG][20-03-20][druid.sql.Statement]{conn-10005, pstmt-20000} clearParameters. 
+[DEBUG][20-03-20][druid.sql.Connection]{conn-10005} pool-recycle

@@ -32,15 +32,40 @@ public class ShiroConfig {
          */
         LinkedHashMap<String, String> linkedHashMap = new LinkedHashMap<>();
         //添加权限
-        linkedHashMap.put("","perms[user:update]");
-        linkedHashMap.put("/index","perms[user:index]");
-        linkedHashMap.put("/","user");
+        linkedHashMap.put("/api/user/getUsers","perms[user:select]");
+        linkedHashMap.put("/api/user/deleteUser/*","perms[user:delete]");
+        linkedHashMap.put("/api/user/updateUser/*","perms[user:update]");
+        linkedHashMap.put("/api/user/addUser","perms[user:insert]");
+        //博客表的权限
+        linkedHashMap.put("/api/blog/getBlogs","perms[blog:select]");
+        linkedHashMap.put("/api/blog/deleteBlog/*","perms[blog:delete]");
+        linkedHashMap.put("/api/blog/updateBlog/*","perms[blog:update]");
+        linkedHashMap.put("/api/blog/addBlog","perms[blog:insert]");
+        //类别表的权限
+        linkedHashMap.put("/api/type/getTypes","perms[type:select]");
+        linkedHashMap.put("/api/type/deleteType/*","perms[type:delete]");
+        linkedHashMap.put("/api/type/updateType/*","perms[type:update]");
+        linkedHashMap.put("/api/type/addType","perms[type:insert]");
+        //角色表的权限
+        linkedHashMap.put("/api/role/getRoles","perms[role:select]");
+        linkedHashMap.put("/api/role/deleteRole/*","perms[role:delete]");
+        linkedHashMap.put("/api/role/updateRole/*","perms[role:update]");
+        linkedHashMap.put("/api/role/addRole","perms[role:insert]");
+        //评论表的权限
+        linkedHashMap.put("/api/comment/getComments","perms[comment:select]");
+        linkedHashMap.put("/api/comment/getAllComment","perms[comment:select]");
+        linkedHashMap.put("/api/comment/addRole","perms[comment:insert]");
+        linkedHashMap.put("/api/comment/deleteComment/*","perms[comment:delete]");
+        //权限的授予和收回
+        linkedHashMap.put("/api/permission/getPermissions/*","perms[permission:select]");
+        linkedHashMap.put("/api/permission/addPermission","perms[permission:insert]");
+        linkedHashMap.put("/api/permission/deletePermission/*/*","perms[permission:delete]");
         //支持通配符linkedHashMap.put("/*","authc");
         bean.setFilterChainDefinitionMap(linkedHashMap);
         //设置登录请求
         bean.setLoginUrl("/login");
         //未授权请求
-        bean.setUnauthorizedUrl("/login?permission=no");
+        bean.setUnauthorizedUrl("/noPermission");
         //bean.setSuccessUrl("/index");
         return bean;
     }
@@ -55,7 +80,7 @@ public class ShiroConfig {
     }
 
     //创建realm对象，需要自定义
-    @Bean//被spring托管
+    @Bean(name = "userRealm")//被spring托管
     public UserRealm userRealm(){
         return new UserRealm();
     }

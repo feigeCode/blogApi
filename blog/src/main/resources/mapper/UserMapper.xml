@@ -35,14 +35,31 @@
                where username like #{searchContent}
             </if>
     </select>
+<!--    得到指定用户的所有或部分权限-->
     <select id="getPermissions" resultType="Role" parameterType="com.feige.common.utils.SelectParam">
         select r.id id,r.role_name roleName,r.permission permission
         from permission p,role r,user u
-        <if test="searchContent==null">
-            where u.id=p.aid and r.id=p.rid limit #{page},#{limit}
-        </if>
         <if test="searchContent!=null">
-            where u.id=p.aid and r.id=p.rid and u.username=#{searchContent} limit #{page},#{limit}
+            where u.id=p.uid and r.id=p.rid u.username=#{searchContent}
         </if>
+        <if test="searchContent==null">
+            where u.id=p.uid and r.id=p.rid and u.id=#{id} limit #{page},#{limit}
+        </if>
+    </select>
+    <select id="getPermissionsCount" resultType="int" parameterType="Integer">
+        select count(*) from permission p,role r,user u
+        where u.id=p.uid and r.id=p.rid and u.id=#{id}
+    </select>
+<!--    给指定用户授权-->
+    <insert id="addPermission" parameterType="map">
+        insert into permission values(#{uId},#{rId})
+    </insert>
+<!--    删除指定用户的权限-->
+    <delete id="deletePermission" parameterType="Permission">
+        delete from permission where uid=#{uId} and rid=#{rId}
+    </delete>
+<!--    查询permission-->
+    <select id="getPermission" parameterType="Permission" resultType="Permission">
+        select uid uId,rid rId from permission where uid=#{uId} and rid=#{rId}
     </select>
 </mapper>
