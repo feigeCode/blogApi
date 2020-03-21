@@ -45,7 +45,7 @@ public class PermissionController {
             @ApiImplicitParam(name = "limit",value = "每页条数",required = true),
             @ApiImplicitParam(name = "id",value = "用户ID",required = true)
     })
-    @GetMapping("/getPermissions/{id}")
+    @GetMapping("/get_permissions/{id}")
     public ResultAjax getPermissions(@RequestParam(value = "page",defaultValue = "1") Integer page, @RequestParam(value = "limit",defaultValue = "10") Integer limit, @PathVariable("id") Integer id){
         List<Role> permissions = permissionService.getPermissions(new SelectParam(page,limit,id));
         int permissionsCount = permissionService.getPermissionsCount(id);
@@ -63,7 +63,7 @@ public class PermissionController {
             @ApiImplicitParam(name = "uId",value = "用户ID",required = true),
             @ApiImplicitParam(name = "rId",value = "角色ID",required = true)
     })
-    @PostMapping("/addPermission")
+    @PostMapping("/add_permission")
     public ResultAjax addPermission(Integer uId,Integer rId){
         if (StringUtils.isNull(userService.getUserById(uId))){
             return ResultAjax.error(Constants.USERNAME_NO_EXIST);
@@ -96,7 +96,7 @@ public class PermissionController {
             @ApiImplicitParam(name = "uId",value = "用户ID",required = true),
             @ApiImplicitParam(name = "rId",value = "角色ID",required = true)
     })
-    @DeleteMapping("/deletePermission/{uId}/{rId}")
+    @DeleteMapping("/delete_permission/{uId}/{rId}")
     public ResultAjax deletePermission(@PathVariable("uId") Integer uId,@PathVariable("rId") Integer rId){
         int delete = permissionService.deletePermission(new Permission(uId,rId));
         if (delete == 1){
@@ -106,7 +106,7 @@ public class PermissionController {
         }
     }
     @ApiOperation(value = "未被授权返回的页面")
-    @GetMapping("/noPermission")
+    @GetMapping("/no_permission")
     public String noPermission(){
         return "您没有被授权访问该页面";
     }

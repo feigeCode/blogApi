@@ -35,7 +35,7 @@ public class CommentController {
             @ApiImplicitParam(name = "page",value = "页码",required = true),
             @ApiImplicitParam(name = "count",value = "页数",required = true),
     })
-    @GetMapping("/getComments")
+    @GetMapping("/get_comments")
     public ResultAjax getComments(Integer blogId,Integer page,Integer count) {
         Map<Object, Object> map = new HashMap<>();
         map.put("blogId",blogId);
@@ -51,7 +51,7 @@ public class CommentController {
             @ApiImplicitParam(name = "limit",value = "每页条数",required = true),
             @ApiImplicitParam(name = "searchContent",value = "搜索内容")
     })
-    @GetMapping("/getAllComment")
+    @GetMapping("/get_all_comment")
     public ResultAjax getAllComment(Integer page, Integer limit, String searchContent){
         List<Comment> allComment = commentMapper.getAllComment(new SelectParam(page,limit,searchContent));
         int count2 = commentMapper.getCount2(searchContent);
@@ -59,7 +59,7 @@ public class CommentController {
     }
     @ApiOperation(value = "删除一条评论")
     @ApiImplicitParam(name = "id",value = "ID",required = true)
-    @DeleteMapping("/deleteComment/{id}")
+    @DeleteMapping("/delete_comment/{id}")
     public ResultAjax deleteBlog(@PathVariable("id") Integer id){
         int delete = commentMapper.deleteComment(id);
         if (delete == 1){
@@ -78,7 +78,7 @@ public class CommentController {
             @ApiImplicitParam(name = "blogId",value = "博客ID",required = true),
             @ApiImplicitParam(name = "userId",value = "用户ID",required = true),
     })
-    @PostMapping("/addComment")
+    @PostMapping("/add_comment")
     public ResultAjax addComment(String content, Integer parentId, Integer good, String replier, Integer blogId, Integer userId){
         Map<Object, Object> map = new HashMap<>();
         map.put("content",content);

@@ -39,7 +39,7 @@ public class CaptchaController
      *     },
      *
      */
-    @GetMapping("/captchaImage")
+    @GetMapping("/captcha_image")
     public ResultAjax getCode(HttpServletResponse response) throws IOException
     {
         // 生成随机字串

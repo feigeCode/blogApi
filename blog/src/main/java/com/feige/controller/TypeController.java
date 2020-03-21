@@ -36,7 +36,7 @@ public class TypeController {
             @ApiImplicitParam(name = "limit",value = "每页条数",required = true),
             @ApiImplicitParam(name = "searchContent",value = "搜索内容")
     })
-    @GetMapping("/getTypes")
+    @GetMapping("/get_types")
     public ResultAjax getTypes(Integer page, Integer limit, String searchContent){
 
         List<Type> list = typeService.getTypes(new SelectParam(page,limit,searchContent));
@@ -51,7 +51,7 @@ public class TypeController {
      */
     @ApiOperation(value = "增加一个类型")
     @ApiImplicitParam(name = "typeName",value = "类型名",required = true)
-    @PostMapping("/addType")
+    @PostMapping("/add_type")
     public ResultAjax addType(String typeName){
         Type type = typeService.getType(typeName);
         if (StringUtils.isNull(type)){
@@ -73,7 +73,7 @@ public class TypeController {
      */
     @ApiOperation(value = "删除一个类型")
     @ApiImplicitParam(name = "typeName",value = "类型名",required = true)
-    @DeleteMapping("/deleteType/{typeName}")
+    @DeleteMapping("/delete_type/{typeName}")
     public ResultAjax deleteType(@PathVariable("typeName") String typeName){
         int delete = typeService.deleteType(typeName);
         if (delete == 1){
@@ -94,7 +94,7 @@ public class TypeController {
             @ApiImplicitParam(name = "id",value = "ID",required = true),
             @ApiImplicitParam(name = "typeName",value = "类型名",required = true)
     })
-    @PutMapping("/updateType/{id}")
+    @PutMapping("/update_type/{id}")
     public ResultAjax updateType(@PathVariable("id") Integer id,String  typeName){
         if (typeService.getTypeById(id).getTypeName().equals(typeName) || StringUtils.isNull(typeService.getType(typeName))){
             int update = typeService.updateType(new Type(id, typeName));

@@ -37,7 +37,7 @@ public class BlogController {
             @ApiImplicitParam(name = "limit",value = "每页条数",required = true),
             @ApiImplicitParam(name = "searchContent",value = "搜索内容")
     })
-    @GetMapping("/getBlogs")
+    @GetMapping("/get_blogs")
     public ResultAjax getBlogs(Integer page, Integer limit, String searchContent){
 
         List<Blog> blogs = blogService.getBlogs(new SelectParam(page,limit,searchContent));
@@ -62,7 +62,7 @@ public class BlogController {
             @ApiImplicitParam(name = "view", value = "浏览量", required = true),
             @ApiImplicitParam(name = "author", value = "作者", required = true),
     })
-    @PostMapping("/addBlog")
+    @PostMapping("/add_blog")
     public ResultAjax addBlog(String  typeName,String title,String content,Integer view,String author){
         Blog blog = blogService.getBlog(title);
         if (StringUtils.isNull(blog)){
@@ -84,7 +84,7 @@ public class BlogController {
      */
     @ApiOperation(value = "删除一篇博客")
     @ApiImplicitParam(name = "title",value = "标题",required = true)
-    @DeleteMapping("/deleteBlog/{title}")
+    @DeleteMapping("/delete_blog/{title}")
     public ResultAjax deleteBlog(@PathVariable("title") String title){
         int delete = blogService.deleteBlog(title);
         if (delete == 1){
@@ -115,7 +115,7 @@ public class BlogController {
             @ApiImplicitParam(name = "id", value = "ID", required = true),
             @ApiImplicitParam(name = "createTime", value = "创建日期", required = true),
     })
-    @PutMapping("/updateBlog/{id}")
+    @PutMapping("/update_blog/{id}")
     public ResultAjax updateBlog(@PathVariable("id") Integer id,String  typeName,String title,String content,String createTime,Integer view,String author){
         if (blogService.getBlogById(id).getTitle().equals(title) || StringUtils.isNull(blogService.getBlog(title))){
             int update = blogService.updateBlog(new Blog(id, typeName, title, content, createTime, DateFormatter.timeFormatter(), author, view));
@@ -126,6 +126,18 @@ public class BlogController {
             }
         }else {
             return ResultAjax.error(Constants.EXIST);
+        }
+
+    }
+    @ApiOperation(value = "获取对应ID的博客")
+    @ApiImplicitParam(name = "id",value = "博客ID",required = true)
+    @GetMapping("/get_blog/{id}")
+    public ResultAjax getBlog(@PathVariable("id") Integer id){
+        Blog blogById = blogService.getBlogById(id);
+        if (StringUtils.isNull(blogById)){
+            return ResultAjax.error();
+        }else {
+            return ResultAjax.success(blogById);
         }
 
     }

@@ -6,10 +6,7 @@ import com.feige.common.utils.DateFormatter;
 import com.feige.common.utils.ResultAjax;
 import com.feige.common.utils.SelectParam;
 import com.feige.common.utils.StringUtils;
-import com.feige.pojo.Permission;
-import com.feige.pojo.Role;
 import com.feige.pojo.User;
-import com.feige.service.RoleService;
 import com.feige.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -27,9 +24,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private RoleService roleService;
-
     /**
      * 按条数查询用户
      * @param page
@@ -38,7 +32,7 @@ public class UserController {
      * @return
      */
     @ApiOperation(value = "按条数查询用户")
-    @GetMapping("/getUsers")
+    @GetMapping("/get_users")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "page",value = "页码",required = true),
             @ApiImplicitParam(name = "limit",value = "每页条数",required = true),
@@ -60,7 +54,7 @@ public class UserController {
             @ApiImplicitParam(name = "selfIntroduce",value = "自我介绍",required = true),
             @ApiImplicitParam(name = "other",value = "其他",required = true),
     })
-    @PostMapping("/addUser")
+    @PostMapping("/add_user")
     public ResultAjax addUser(String  headPhoto,String username,String email,String password,Integer sex,String hobby,String selfIntroduce,String other){
         User user = userService.getUser(username);
         if(StringUtils.isNull(user)){
@@ -82,7 +76,7 @@ public class UserController {
      */
     @ApiOperation(value = "删除一个用户")
     @ApiImplicitParam(name = "username",value = "用户名",required = true)
-    @DeleteMapping("/deleteUser/{username}")
+    @DeleteMapping("/delete_user/{username}")
     public ResultAjax deleteUser(@PathVariable("username") String username){
         int delete = userService.deleteUser(username);
         if(delete == 1){
@@ -120,7 +114,7 @@ public class UserController {
             @ApiImplicitParam(name = "id",value = "ID",required = true),
             @ApiImplicitParam(name = "time",value = "时间",required = true),
     })
-    @PutMapping("/updateUser/{id}")
+    @PutMapping("/update_user/{id}")
     public ResultAjax updateUser(@PathVariable("id") Integer id,String  headPhoto,String username,String email,String password,Integer sex,String hobby,String selfIntroduce,String other,String time){
         /**
          * 用户名是唯一的

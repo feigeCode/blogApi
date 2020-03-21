@@ -36,7 +36,7 @@ public class RoleController {
             @ApiImplicitParam(name = "limit",value = "每页条数",required = true),
             @ApiImplicitParam(name = "searchContent",value = "搜索内容")
     })
-    @GetMapping("/getRoles")
+    @GetMapping("/get_roles")
     public ResultAjax getRoles(Integer page, Integer limit, String searchContent){
         List<Role> list = roleService.getRoles(new SelectParam(page,limit,searchContent));
         int roleCount = roleService.getCount(searchContent);
@@ -54,7 +54,7 @@ public class RoleController {
             @ApiImplicitParam(name = "roleName",value = "角色名",required = true),
             @ApiImplicitParam(name = "permission",value = "权限",required = true),
     })
-    @PostMapping("/addRole")
+    @PostMapping("/add_role")
     public ResultAjax addRole(String roleName,String permission){
         Role role = roleService.getRole(roleName);
         if (StringUtils.isNull(role)){
@@ -70,7 +70,7 @@ public class RoleController {
     }
     @ApiOperation(value = "删除一个用户")
     @ApiImplicitParam(name = "roleName",value = "角色名",required = true)
-    @DeleteMapping("/deleteRole/{roleName}")
+    @DeleteMapping("/delete_role/{roleName}")
     public ResultAjax deleteUser(@PathVariable("roleName") String roleName){
         int delete = roleService.deleteRole(roleName);
         if (delete == 1) {
@@ -93,7 +93,7 @@ public class RoleController {
             @ApiImplicitParam(name = "roleName",value = "角色名",required = true),
             @ApiImplicitParam(name = "permission",value = "权限",required = true)
     })
-    @PutMapping("/updateRole/{id}")
+    @PutMapping("/update_role/{id}")
     public ResultAjax updateUser(@PathVariable("id") Integer id,String  roleName,String permission){
        if (roleService.getRoleById(id).getRoleName().equals(roleName) || StringUtils.isNull(roleService.getRole(roleName))){
            int update = roleService.updateRole(new Role(id, roleName, permission));
