@@ -37,12 +37,12 @@ public class ShiroConfig {
         linkedHashMap.put("/api/user/update_user/*","perms[user:update]");
         linkedHashMap.put("/api/user/add_user","perms[user:insert]");
         //博客表的权限
-        linkedHashMap.put("/api/blog/get_blogs","perms[blog:select]");
+        //linkedHashMap.put("/api/blog/get_blogs","perms[blog:select]");
         linkedHashMap.put("/api/blog/delete_blog/*","perms[blog:delete]");
         linkedHashMap.put("/api/blog/update_blog/*","perms[blog:update]");
         linkedHashMap.put("/api/blog/add_blog","perms[blog:insert]");
         //类别表的权限
-        linkedHashMap.put("/api/type/get_types","perms[type:select]");
+        //linkedHashMap.put("/api/type/get_types","perms[type:select]");
         linkedHashMap.put("/api/type/delete_type/*","perms[type:delete]");
         linkedHashMap.put("/api/type/update_type/*","perms[type:update]");
         linkedHashMap.put("/api/type/add_type","perms[type:insert]");
@@ -52,9 +52,9 @@ public class ShiroConfig {
         linkedHashMap.put("/api/role/update_role/*","perms[role:update]");
         linkedHashMap.put("/api/role/add_role","perms[role:insert]");
         //评论表的权限
-        linkedHashMap.put("/api/comment/get_comments","perms[comment:select]");
-        linkedHashMap.put("/api/comment/get_all_comment","perms[comment:select]");
-        linkedHashMap.put("/api/comment/add_comment","perms[comment:insert]");
+        //linkedHashMap.put("/api/comment/get_comments","perms[comment:select]");
+        //linkedHashMap.put("/api/comment/get_all_comment","perms[comment:select]");
+        //linkedHashMap.put("/api/comment/add_comment","perms[comment:insert]");
         linkedHashMap.put("/api/comment/delete_comment/*","perms[comment:delete]");
         //权限的授予和收回
         linkedHashMap.put("/api/permission/get_permissions/*","perms[permission:select]");

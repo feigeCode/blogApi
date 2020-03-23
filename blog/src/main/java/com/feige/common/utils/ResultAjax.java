@@ -66,19 +66,21 @@ public class ResultAjax extends HashMap<String,Object> {
     public ResultAjax(int code, String msg, Object data, int count){
         super.put(CODE_TAG,code);
         super.put(MSG_TAG,msg);
-        if(StringUtils.isNotNull(data)){
-            ObjectMapper mapper = new ObjectMapper();
-            String jsonData = null;
-            try {
-                jsonData = mapper.writeValueAsString(data);
-            } catch (JsonProcessingException e) {
-                e.printStackTrace();
-            }
-            if (!StringUtils.isNull(jsonData)){
-                super.put(DATA_TAG,jsonData);
-                super.put(COUNT_TAG,count);
-            }
-        }
+//        if(StringUtils.isNotNull(data)){
+//            ObjectMapper mapper = new ObjectMapper();
+//            String jsonData = null;
+//            try {
+//                jsonData = mapper.writeValueAsString(data);
+//            } catch (JsonProcessingException e) {
+//                e.printStackTrace();
+//            }
+//            if (!StringUtils.isNull(jsonData)){
+//                super.put(DATA_TAG,jsonData);
+//                super.put(COUNT_TAG,count);
+//            }
+//        }
+        super.put(DATA_TAG,data);
+        super.put(COUNT_TAG,count);
     }
     /**
      * 返回一个成功消息

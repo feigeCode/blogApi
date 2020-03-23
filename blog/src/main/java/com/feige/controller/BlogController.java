@@ -134,6 +134,7 @@ public class BlogController {
     @GetMapping("/get_blog/{id}")
     public ResultAjax getBlog(@PathVariable("id") Integer id){
         Blog blogById = blogService.getBlogById(id);
+        //System.out.println(blogById);
         if (StringUtils.isNull(blogById)){
             return ResultAjax.error();
         }else {

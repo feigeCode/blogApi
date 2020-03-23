@@ -14,6 +14,7 @@ import org.commonmark.renderer.html.HtmlRenderer;
 import java.util.*;
 
 public class MarkdownUtil {
+
     /**
      * markdown==>html
      *
@@ -52,7 +53,6 @@ public class MarkdownUtil {
 
         @Override
         public void setAttributes(Node node, String s, Map<String, String> map) {
-            int count = 1;
             //改变a标签的target属性为_blank
             if(node instanceof Link) {
                 map.put("target","_blank");
@@ -69,50 +69,6 @@ public class MarkdownUtil {
             if (node instanceof TableHead) {
                 map.put("class","el-table__header-wrapper");
             }
-        }
-
-        public static void main(String[] args) {
-            String markdown = "| 飞哥 | 飞哥 | 飞哥 |\n" +
-                    "| ---- | ---- | ---- |\n" +
-                    "| 飞哥 | 飞哥 | 飞哥 |\n" +
-                    "| 飞哥 | 飞哥 | 飞哥 |\n" +
-                    "| 飞哥 | 飞哥 | 飞哥 |\n" +
-                    "\n" +
-                    "\n" +
-                    "\n" +
-                    "~~~java\n" +
-                    "static class CustomAttributeProvider implements AttributeProvider {\n" +
-                    "\n" +
-                    "        @Override\n" +
-                    "        public void setAttributes(Node node, String s, Map<String, String> map) {\n" +
-                    "            //改变a标签的target属性为_blank\n" +
-                    "            if(node instanceof Link) {\n" +
-                    "                map.put(\"target\",\"_blank\");\n" +
-                    "            }\n" +
-                    "            if (node instanceof TableBlock) {\n" +
-                    "                map.put(\"class\",\"el-table__body-wrapper is-scrolling-none\");\n" +
-                    "            }\n" +
-                    "            if (node instanceof TableBody) {\n" +
-                    "                map.put(\"class\",\"el-table__body\");\n" +
-                    "            }\n" +
-                    "            if (node instanceof TableRow) {\n" +
-                    "                map.put(\"class\",\"el-table__row\");\n" +
-                    "            }\n" +
-                    "            if (node instanceof TableCell) {\n" +
-                    "                map.put(\"class\",\"el-table_13_column_55\");\n" +
-                    "            }\n" +
-                    "        }\n" +
-                    "~~~\n" +
-                    "\n" +
-                    "# feige\n" +
-                    "\n" +
-                    "## feige\n" +
-                    "\n" +
-                    "## feige\n" +
-                    "\n";
-            String markdownToHtml = markdownToHtml(markdown);
-            String htmlExtensions = markdownToHtmlExtensions(markdown);
-            System.out.println(htmlExtensions);
         }
     }
 }
