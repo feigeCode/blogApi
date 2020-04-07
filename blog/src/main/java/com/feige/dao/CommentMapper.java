@@ -13,6 +13,7 @@ import java.util.Map;
 @Repository
 public interface CommentMapper {
     List<Comment> getComments(Map map);
+    List<Comment> getComments1(Integer blogId);
     List<Comment> getReplies(Map map);
     int addComment(Map map);
     int deleteComment(Integer id);

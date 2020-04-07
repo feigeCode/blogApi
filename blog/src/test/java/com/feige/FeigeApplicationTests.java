@@ -4,12 +4,17 @@ package com.feige;
 import com.feige.common.utils.MarkdownUtil;
 import com.feige.common.utils.redis.RedisCache;
 import com.feige.dao.BlogMapper;
+import com.feige.dao.CommentMapper;
 import com.feige.pojo.Blog;
+import com.feige.pojo.Comment;
+import com.feige.pojo.CommentAndReplies;
+import com.feige.service.CommentService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.sql.DataSource;
+import java.util.List;
 
 
 @SpringBootTest
@@ -23,6 +28,12 @@ public class FeigeApplicationTests {
 
     @Autowired
     DataSource dataSource;
+
+    @Autowired
+    CommentMapper commentMapper;
+
+    @Autowired
+    CommentService commentService;
     
     @Test
     public void contextLoads() {
@@ -79,6 +90,20 @@ public class FeigeApplicationTests {
         String htmlExtensions = MarkdownUtil.markdownToHtmlExtensions(markdown);
         System.out.println(htmlExtensions);
     }
+    @Test
+    void test3(){
+        List<Comment> comments1 = commentMapper.getComments1(1);
+        System.out.println(comments1);
+    }
+
+    @Test
+    void test4(){
+        List<CommentAndReplies> comments1 = commentService.getComments1(1);
+        for (CommentAndReplies commentAndReplies : comments1) {
+            System.out.println(commentAndReplies);
+        }
+    }
+
 
 
 }

@@ -4,6 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.feige.dao.CommentMapper">
+    <select id="getComments1" resultType="Comment" parameterType="Integer">
+        select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
+        username,c.create_time createTime,replier from blog b,comments c,user u
+        where c.blog_id=#{blogId} and c.user_id=u.id
+    </select>
     <insert id="addComment" parameterType="map">
         insert into `comments`(content,parent_id,good,create_time,replier,blog_id,user_id) values (#{content},#{parentId},#{good},#{createTime},#{replier},#{blogId},#{userId})
     </insert>

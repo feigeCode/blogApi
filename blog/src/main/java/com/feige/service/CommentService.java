@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 public interface CommentService {
+    List<CommentAndReplies> getComments1(Integer blogId);
     List<CommentAndReplies> getCommentAndReplies(Map map);
     void getAllReply(Comment comment, Map map);
 }
