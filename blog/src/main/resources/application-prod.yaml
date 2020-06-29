@@ -1,7 +1,7 @@
 spring:
   datasource:
     username: root
-    password: Hufei169357@
+    password:
     url: jdbc:mysql://localhost:3306/myblog?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
@@ -47,7 +47,7 @@ mybatis:
   type-aliases-package: com.feige.pojo
   mapper-locations: classpath:mapper/*.xml
 server:
-  port: 8090
+  port: 9999
 # token配置
 token:
   # 令牌自定义标识

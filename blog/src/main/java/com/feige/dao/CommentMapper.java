@@ -13,11 +13,11 @@ import java.util.Map;
 @Repository
 public interface CommentMapper {
     List<Comment> getComments(Map map);
-    List<Comment> getComments1(Integer blogId);
+    List<Comment> getComments1(String blogId);
     List<Comment> getReplies(Map map);
     int addComment(Map map);
     int deleteComment(Integer id);
     List<Comment> getAllComment(SelectParam selectParam);
-    int getCount1(Integer blogId);
+    int getCount1(String blogId);
     int getCount2(String searchContent);
 }

@@ -15,14 +15,14 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.*;
 
 @Api(tags = "博客的增删改查接口")
 @RestController
 @RequestMapping("/api/blog")
 public class BlogController {
     @Autowired
-    BlogService blogService;
+    private BlogService blogService;
 
     /**
      * 按条数查询博客
@@ -140,6 +140,33 @@ public class BlogController {
         }else {
             return ResultAjax.success(blogById);
         }
-
+    }
+    @ApiOperation(value = "获取对应类型的博客")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "page",value = "页码",required = true),
+            @ApiImplicitParam(name = "limit",value = "每页条数",required = true),
+            @ApiImplicitParam(name = "searchContent",value = "搜索内容")
+    })
+    @GetMapping("/get_blog_by_type")
+    public ResultAjax getBlogByTypeName(Integer page, Integer limit,String typeName){
+        Map<String, Object> map = new HashMap<>();
+        map.put("page",(page - 1) * limit);
+        map.put("limit",limit);
+        map.put("typeName",typeName);
+        List<Blog> blogByTypeName = blogService.getBlogByTypeName(map);
+        int countByTypeName = blogService.getCountByTypeName(typeName);
+        if (StringUtils.isNull(blogByTypeName)){
+            return ResultAjax.error();
+        }else {
+            return ResultAjax.success(blogByTypeName,countByTypeName);
+        }
+    }
+    @ApiOperation(value = "查询浏览量最高的十篇博客")
+    @GetMapping("/get_blogs_view")
+    public ResultAjax getBlogsByView(){
+        List<Blog> blogs = blogService.getAll();
+        blogs.sort((b1,b2) -> b2.getView() - b1.getView());
+        List<Blog> blogs1 = blogs.subList(0, 10);
+        return ResultAjax.success(blogs1);
     }
 }

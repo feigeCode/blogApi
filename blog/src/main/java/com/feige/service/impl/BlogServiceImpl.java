@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class BlogServiceImpl implements BlogService {
@@ -54,5 +55,20 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public Blog getBlog(String searchContent) {
         return blogMapper.getBlog(searchContent);
+    }
+
+    @Override
+    public List<Blog> getBlogByTypeName(Map map) {
+        return blogMapper.getBlogByTypeName(map);
+    }
+
+    @Override
+    public int getCountByTypeName(String typeName) {
+        return blogMapper.getCountByTypeName(typeName);
+    }
+
+    @Override
+    public List<Blog> getAll() {
+        return blogMapper.getAll();
     }
 }

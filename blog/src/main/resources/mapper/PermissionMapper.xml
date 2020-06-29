@@ -5,11 +5,11 @@
 
 <mapper namespace="com.feige.dao.PermissionMapper">
     <!--    得到指定用户的所有或部分权限-->
-    <select id="getPermissions" resultType="Role" parameterType="com.feige.common.utils.SelectParam">
+    <select id="getPermissions" resultType="com.feige.pojo.Role" parameterType="com.feige.common.utils.SelectParam">
         select r.id id,r.role_name roleName,r.permission permission
         from permission p,role r,user u
         <if test="searchContent!=null">
-            where u.id=p.uid and r.id=p.rid u.username=#{searchContent}
+            where u.id=p.uid and r.id=p.rid and u.username=#{searchContent}
         </if>
         <if test="searchContent==null">
             where u.id=p.uid and r.id=p.rid and u.id=#{id} limit #{page},#{limit}
@@ -28,7 +28,7 @@
         delete from permission where uid=#{uId} and rid=#{rId}
     </delete>
     <!--    查询permission-->
-    <select id="getPermission" parameterType="Permission" resultType="Permission">
+    <select id="getPermission" parameterType="Permission" resultType="com.feige.pojo.Permission">
         select uid uId,rid rId from permission where uid=#{uId} and rid=#{rId}
     </select>
 </mapper>

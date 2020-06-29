@@ -15,9 +15,8 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+
 @Api(tags = "评论增删查接口")
 @RestController
 @RequestMapping("/api/comment")
@@ -30,19 +29,16 @@ public class CommentController {
     CommentMapper commentMapper;
 
     @ApiOperation(value = "查询某一篇博客的所有评论")
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = "blogId",value = "博客ID",required = true),
-            @ApiImplicitParam(name = "page",value = "页码",required = true),
-            @ApiImplicitParam(name = "count",value = "页数",required = true),
-    })
-    @GetMapping("/get_comments")
-    public ResultAjax getComments(Integer blogId,Integer page,Integer count) {
-        Map<Object, Object> map = new HashMap<>();
-        map.put("blogId",blogId);
-        map.put("page",(page-1)*count);
-        map.put("count",count);
+    @ApiImplicitParam(name = "blogId",value = "博客ID",required = true)
+    @GetMapping("/get_comments/{blogId}")
+    public ResultAjax getComments(@PathVariable String blogId) {
         int total = commentMapper.getCount1(blogId);
-        List<CommentAndReplies> commentAndReplies = commentService.getCommentAndReplies(map);
+        long start = System.currentTimeMillis();
+        List<CommentAndReplies> commentAndReplies = commentService.getComments1(blogId);
+        System.out.println(commentAndReplies);
+        long end = System.currentTimeMillis();
+        System.out.println("_____________________");
+        System.out.println(end - start);
         return ResultAjax.success(commentAndReplies,total);
     }
     @ApiOperation(value = "查询所有评论和回复")

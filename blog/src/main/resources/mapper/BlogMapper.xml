@@ -13,7 +13,7 @@
     <update id="updateBlog" parameterType="Blog">
         update `blog` set type_name=#{typeName},title=#{title},content=#{content},create_time=#{createTime},change_time=#{changeTime},author=#{author},view=#{view} where id=#{id}
     </update>
-    <select id="getBlogs" resultType="Blog" parameterType="com.feige.common.utils.SelectParam">
+    <select id="getBlogs" resultType="com.feige.pojo.Blog" parameterType="com.feige.common.utils.SelectParam">
         select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog
         <if test="searchContent==null">
             limit #{page},#{limit}
@@ -22,10 +22,10 @@
             where title like #{searchContent} or content like #{searchContent} limit #{page},#{limit}
         </if>
     </select>
-    <select id="getBlogById" resultType="Blog" parameterType="Integer">
+    <select id="getBlogById" resultType="com.feige.pojo.Blog" parameterType="Integer">
         select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where id=#{id}
     </select>
-    <select id="getBlog" resultType="Blog" parameterType="String">
+    <select id="getBlog" resultType="com.feige.pojo.Blog" parameterType="String">
         select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where title=#{searchContent}
     </select>
     <select id="getCount" resultType="int" parameterType="String">
@@ -33,5 +33,14 @@
         <if test="searchContent!=null">
             where title like #{searchContent} or content like #{searchContent}
         </if>
+    </select>
+    <select id="getBlogByTypeName" resultType="com.feige.pojo.Blog" parameterType="map">
+        select id,type_name typeName,title,content,create_time createTime,change_time changeTime,author,view from blog where type_name=#{typeName} limit #{page},#{limit}
+    </select>
+    <select id="getCountByTypeName" resultType="java.lang.Integer" parameterType="String">
+        select count(1) from blog where type_name=#{typeName}
+    </select>
+    <select id="getAll" resultType="com.feige.pojo.Blog">
+        select * from blog
     </select>
 </mapper>

@@ -92,13 +92,13 @@ public class FeigeApplicationTests {
     }
     @Test
     void test3(){
-        List<Comment> comments1 = commentMapper.getComments1(1);
+        List<Comment> comments1 = commentMapper.getComments1("1");
         System.out.println(comments1);
     }
 
     @Test
     void test4(){
-        List<CommentAndReplies> comments1 = commentService.getComments1(1);
+        List<CommentAndReplies> comments1 = commentService.getComments1("1");
         for (CommentAndReplies commentAndReplies : comments1) {
             System.out.println(commentAndReplies);
         }

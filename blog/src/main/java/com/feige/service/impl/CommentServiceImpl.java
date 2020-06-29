@@ -13,13 +13,14 @@ import java.util.Map;
 
 
 @Service
+@SuppressWarnings("all")
 public class CommentServiceImpl implements CommentService {
     @Autowired
     private CommentMapper commentMapper;
 
 
     @Override
-    public List<CommentAndReplies> getComments1(Integer blogId) {
+    public List<CommentAndReplies> getComments1(String blogId) {
         //查询出所有的评论
         List<Comment> comments1 = commentMapper.getComments1(blogId);
         //新建一个存储根评论和回复的列表

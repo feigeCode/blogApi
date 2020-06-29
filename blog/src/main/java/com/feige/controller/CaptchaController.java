@@ -9,7 +9,9 @@ import com.feige.common.utils.VerifyCodeUtils;
 import com.feige.common.utils.redis.RedisCache;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
@@ -24,9 +26,11 @@ import java.util.concurrent.TimeUnit;
  */
 @Api(tags = "生成验证码")
 @RestController
+@RequestMapping("/api")
 public class CaptchaController
 {
     @Autowired
+    @Qualifier("redisCache")
     private RedisCache redisCache;
 
     /**

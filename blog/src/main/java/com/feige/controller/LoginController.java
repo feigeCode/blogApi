@@ -21,6 +21,7 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,6 +31,7 @@ import java.util.Set;
 
 @Api(tags = "登录接口")
 @RestController
+@RequestMapping("/api")
 public class LoginController {
     @Autowired
     RedisCache redisCache;

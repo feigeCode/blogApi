@@ -93,8 +93,6 @@ public class Constants {
      * 资源映射路径 前缀
      */
     public static final String RESOURCE_PREFIX = "/profile";
-
-    //用户已存在
     public static final String EXIST = "该条数据已存在";
     public static final String ROLE_NO_EXIST = "该角色不存在";
     public static final String NO_PERMISSION = "未授权";

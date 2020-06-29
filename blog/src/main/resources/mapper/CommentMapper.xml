@@ -4,10 +4,10 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.feige.dao.CommentMapper">
-    <select id="getComments1" resultType="Comment" parameterType="Integer">
+    <select id="getComments1" resultType="com.feige.pojo.Comment" parameterType="String">
         select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
         username,c.create_time createTime,replier from blog b,comments c,user u
-        where c.blog_id=#{blogId} and c.user_id=u.id
+        where c.blog_id=#{blogId} and c.user_id=u.id ORDER BY c.`create_time` DESC
     </select>
     <insert id="addComment" parameterType="map">
         insert into `comments`(content,parent_id,good,create_time,replier,blog_id,user_id) values (#{content},#{parentId},#{good},#{createTime},#{replier},#{blogId},#{userId})
@@ -15,32 +15,32 @@
     <delete id="deleteComment" parameterType="integer">
         delete from `comments` where id=#{id}
     </delete>
-    <select id="getComments" resultType="Comment" parameterType="map">
+    <select id="getComments" resultType="com.feige.pojo.Comment" parameterType="map">
         select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
         username,c.create_time createTime,replier from blog b,comments c,user u
         where c.blog_id=#{blogId} and c.user_id=u.id  and
-        c.parent_id is null limit #{page},#{count};;
+        c.parent_id is null limit #{page},#{count}
     </select>
-    <select id="getReplies" resultType="Comment" parameterType="map">
+    <select id="getReplies" resultType="com.feige.pojo.Comment" parameterType="map">
         select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,
         username,c.create_time createTime,replier from blog b,comments c,user u
         where c.blog_id=#{blogId} and c.user_id=u.id and
-        c.parent_id =#{parentId};
+        c.parent_id =#{parentId}
 
     </select>
-    <select id="getCount1" resultType="int" parameterType="Integer">
+    <select id="getCount1" resultType="int" parameterType="String">
         select distinct count(*) from comments c
         where c.blog_id=#{blogId} and
-        c.parent_id is null;
+        c.parent_id is null
     </select>
 
-    <select id="getAllComment" resultType="Comment" parameterType="com.feige.common.utils.SelectParam">
+    <select id="getAllComment" resultType="com.feige.pojo.Comment" parameterType="com.feige.common.utils.SelectParam">
         select distinct c.id id,c.content content,parent_id parentId,good,head_photo headPhoto,username,c.create_time createTime,replier from blog b,comments c,user u
         <if test="searchContent==null">
             where c.blog_id=b.id and c.user_id=u.id limit #{page},#{limit};
         </if>
         <if test="searchContent!=null">
-            where c.blog_id=b.id and c.user_id=u.id and c.content like #{searchContent} limit #{page},#{limit}
+            where c.blog_id=b.id and c.user_id=u.id and c.content like #{searchContent}  limit #{page},#{limit}
         </if>
     </select>
     <select id="getCount2" resultType="int" parameterType="String">
